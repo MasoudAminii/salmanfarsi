@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // Set base directory to the root
+    "paths": {
+      "@/*": ["src/*"],
+      "@/components/*": ["src/components/*"],
+      "@/lib/*": ["src/lib/*"]
+    },
+    "jsx": "react-jsx" // If you're using React 17 JSX transform
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.js",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
+}

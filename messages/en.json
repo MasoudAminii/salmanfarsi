@@ -1,0 +1,669 @@
+{
+  "Header": {
+    "home": "Home",
+    "about": "About",
+    "schoolStaff": "School Staff",
+    "curriculum": "Curriculum",
+    "facilities": "facilities",
+    "admission": "Admission",
+    "termsConditions": "Terms & Conditions",
+    "fees": "Fees",
+    "media": "Media",
+    "blogs": "school news",
+    "imageGallery": "Image Gallery",
+    "contactUs": "Contact Us"
+  },
+  "Footer": {
+    "newsletter": {
+      "title": "NewsLetter",
+      "placeholder": "Enter Email Address"
+    },
+    "main": {
+      "title": "salman farsi",
+      "description": "Salman Farsi Educational Complex: The first Iranian school in Dubai, offering Persian education and advanced facilities for students' growth.",
+      "link": "contact us",
+      "quicklink_title": "Quick Links",
+      "quicklinks": {
+        "home": "Home",
+        "about": "About Us",
+        "schoolstaff": "School Staff",
+        "schoolnews": "School News",
+        "contactus": "Contact Us"
+      },
+      "curriculum_title": "Curriculum",
+      "curriculum_links": {
+        "elemantryschool": "Elementary School",
+        "middleschool": "Middle School",
+        "highschool": "High School",
+        "ehsan": "Ehsan"
+      },
+      "contactus_title": "Contsct Us",
+      "contactus_link": {
+        "address": "Al Qusais - Al Qusais 1 - Dubai",
+        "phone": "+971 4 298 811 6",
+        "email": "info@ir-salmanfarsi.com"
+      }
+    },
+    "copyright": {
+      "title": "© All Copyright 2024 by Iranian Salman Farsi School",
+      "faq": "FAQ",
+      "terms": "Terms & Conditions",
+      "policy": "Privacy Policy"
+    }
+  },
+  "SearchPage": {
+    "heding": "search",
+    "search_title": "Search for the phrase you want...",
+    "no_search": "No results found. Try another phrase!",
+    "loading": "searching...",
+    "placeholder": "search...",
+    "school_title": "School News",
+    "staff_title": "School Staff"
+  },
+  "HomePage": {
+    "Main": {
+      "title_description": "Salman Farsi Educational Complex",
+      "main_title": "A Choice for Success, A Path to Growth",
+      "highlight": "Success",
+      "title_botton": "Apply Now",
+      "image-title": "100% Happy Students",
+      "image-description": "1.8k Achievers"
+    },
+    "About": {
+      "title": "About Us",
+      "title-description": "Salman Farsi Educational Complex",
+      "description-1": " provides high-quality education across primary, middle, and high school levels, with a special focus on the diverse needs of our students. Our mission is to nurture academic excellence, personal growth, and character development in a supportive environment.",
+      "description-2": "We also offer a co-educational exceptional education program, designed specifically for students with unique learning needs. This program provides personalized learning plans tailored to each student's strengths and challenges",
+      "experience": {
+        "experience-1": "Experienced educators",
+        "experience-2": "Extracurricular activities",
+        "experience-3": "Supportive environment for all students"
+      },
+      "button": "more about us",
+      "infinite-slider-collage": "Top University Destinations",
+      "video-title": "Explore Salman Farsi Virtually",
+      "video-description": "Discover Salman Farsi Inspiring Minds",
+      "video-list": {
+        "video-1": "Successful Graduates",
+        "video-2": "Years of Experience",
+        "video-3": "Annual Admissions"
+      },
+      "list-number": {
+        "list-1": "1.7k+",
+        "list-2": "67+",
+        "list-3": "490+"
+      },
+      "Testimonials-title": "our best services",
+      "Testimonials-description": "Unmatched Services for a Unique Experience",
+      "facilities": [
+        {
+          "title": "Arts",
+          "description": "A space dedicated to nurturing creativity and artistic expression."
+        },
+        {
+          "title": "Smart Classrooms",
+          "description": "Modern classrooms with smart boards for a new learning experience."
+        },
+        {
+          "title": "Advanced Clinic",
+          "description": "Healthcare and medical services with modern equipment for student health."
+        },
+        {
+          "title": "Football Field",
+          "description": "A standard grass field for sports competitions and activities."
+        },
+        {
+          "title": "Library",
+          "description": "A rich repository of books and resources for study and research."
+        },
+        {
+          "title": "Primary Reception",
+          "description": "A welcoming space for younger students and their families."
+        },
+        {
+          "title": "School Yard",
+          "description": "An open space for recreational activities and student gatherings."
+        },
+        {
+          "title": "Stage",
+          "description": "A platform for events, performances, and assemblies."
+        }
+      ]
+    },
+    "Services": {
+      "title": "Explore Our Educational Programs",
+      "title-description": "Our Programs a Path to Success at Every Stage",
+      "services-list": [
+        {
+          "title": "Elementary School",
+          "description": "The foundational stage of education, focusing on essential academic and social skills."
+        },
+        {
+          "title": "Middle School ",
+          "description": "Early steps in education, emphasizing general subjects and personal growth."
+        },
+        {
+          "title": "High School",
+          "description": "Specialized education in fields like Math, Science, Humanities, and Computer Science, preparing students for university and careers."
+        },
+        {
+          "title": "Ehsaas",
+          "description": "A supportive space for students with special needs, providing a suitable environment and specialized facilities for empowerment."
+        }
+      ]
+    },
+    "reviews": {
+      "heading": "Top Reviews",
+      "title": "Top voices sharing their experiences. Join the story"
+    },
+    "SchoolNews": {
+      "title": "School News",
+      "title-description": "Latest News from Salman Farsi",
+      "button": "view all blogs"
+    },
+    "faq": {
+      "small_title": "FAQ",
+      "title": "Frequently Asked Questions",
+      "description": "Explore answers to common questions about our school, including admissions, fees, and academic programs.",
+      "questions": [
+        {
+          "question": "What languages are used for instruction at the school?",
+          "answer": "The primary language of instruction at our school is Persian, while English and Arabic are also included in the curriculum to enhance students' language skills."
+        },
+        {
+          "question": "What is the registration process, and what are the required documents and timeline?",
+          "answer": "To register at the school, parents need to visit the school in person and provide required documents such as birth certificate, ID card, health certificate, passport-sized photo, and previous academic records. For detailed information and to confirm the necessary documents, please contact the school before visiting. Registration typically occurs in June and July, and late registrations will incur an additional penalty fee."
+        },
+        {
+          "question": "What are the tuition fees and what do they cover?",
+          "answer": "Tuition fees vary depending on the grade level and chosen specialization. The fees cover educational costs, textbooks, extracurricular activities, and basic school services. For more precise details, please contact the school's finance department."
+        }
+      ]
+    }
+  },
+  "AboutPage": {
+    "banner": {
+      "title": "Home",
+      "description": "About Us"
+    },
+    "about_us": {
+      "mainHeading": "About Salman Farsi Educational Complex",
+      "main_descripton": "The Salman Farsi Educational Complex stands as a beacon of Iranian education in the United Arab Emirates, carrying a legacy of achievement and dedication. This institution narrates a rich history marked by tireless efforts, unwavering commitment, and innovative strides in the field of education.",
+      "image_title": "28,000",
+      "image_description": "Alumni Strong",
+      "sections": [
+        {
+          "title": "In the heart of Dubai, where innovation and heritage intertwine, a remarkable educational story unfolds.",
+          "content": "In the year 1957, Iranian School Dubai, the first Iranian school in the Emirates, proudly raised the flag of knowledge and education. The flame ignited that year not only bestowed the light of learning upon Iranian children in the Emirates but also laid the foundation for a fruitful journey in the path of education."
+        },
+        {
+          "title": "Over time, Iranian School Dubai witnessed remarkable transformations and advancements",
+          "content": "In 1963, the secondary school was added to the institution, and its name was changed to Iranian High School Dubai. The year 1972 also saw the establishment of Abu Ali Sina Guidance School."
+        },
+        {
+          "title": "In 1995, a new chapter unfolded in the history of this institution.",
+          "content": "Shahid Rajaee Elementary School, Buali Boys Guidance School, and Shahid Mohammad Bagher Sadr High School united under a single complex, giving birth to Salman Farsi Educational Complex."
+        },
+        {
+          "title": "Salman Farsi Complex was built on land gifted by Sheikh Mohammed bin Rashid Al Maktoum, the Emir of Dubai.",
+          "content": "With its modern and advanced educational facilities, including 26 classrooms, a library, a multipurpose hall, laboratories, computer workshops, sports fields, and more, the complex provided an ideal environment for students to pursue knowledge."
+        },
+        {
+          "title": "Today, Salman Farsi Complex is recognized as one of the leading Iranian schools in the Emirates.",
+          "content": "Supported by a team of experienced and dedicated teachers, students from this complex receive education in various fields, including science, humanities, and vocational studies, at the elementary, middle, and high school levels, preparing them for entry into prestigious universities or the job market."
+        },
+        {
+          "title": "The graduates of this complex stand as a testament to its remarkable success.",
+          "content": "Each year, over 90% of twelfth-grade students graduate and go on to pursue higher education at reputable universities around the world or join the UAE job market."
+        },
+        {
+          "title": "The story of Salman Farsi Complex is a story of perseverance, dedication, and commitment to knowledge and education.",
+          "content": "A journey that began with Iranian School and continues to flourish. A journey that nurtures a well-educated and competent generation for the future of Iran and the Emirates."
+        },
+        {
+          "title": "Features and Facilities",
+          "content": "The Salman Farsi Educational Complex is a modern learning environment, housing:",
+          "list": [
+            "Two two-story buildings with 26 classrooms equipped with smartboards.",
+            "A library with a collection of 4,500 books.",
+            "A multipurpose hall for prayers, assemblies, and examinations.",
+            "State-of-the-art science laboratories for elementary, middle, and high school levels.",
+            "Three computer labs with over 40 computers, fully equipped.",
+            "Sports facilities, including football, handball, volleyball, and basketball courts."
+          ]
+        },
+        {
+          "title": "Graduates of the Complex",
+          "content": "Every year, over 90% of 12th-grade students graduate from the complex. A significant number of these graduates pursue higher education at prestigious universities worldwide or join the UAE workforce, showcasing their skills and potential."
+        },
+        {
+          "title": "A Message of Pride",
+          "content": "The Salman Farsi Educational Complex embodies a proud history and a lasting commitment to excellence. As a symbol of Iranian achievement in education, the complex continues to be a model of sustainable development, collective effort, and high aspirations. We take immense pride in nurturing generations who shine brightly in academic, cultural, and social arenas, carrying the name of Iran to the global stage."
+        }
+      ],
+      "ourteam": {
+        "heading": "our expert team",
+        "title": "Meet Our Professional Team Members",
+        "link": "view all members"
+      }
+    }
+  },
+  "ShoolStaffPage": {
+    "banner": {
+      "title": "About Us",
+      "description": "School Staff"
+    },
+    "main": {
+      "heading": "our expert team",
+      "title": "Meet Our Professional Team Members",
+      "search_placeholder": "search",
+      "card": {
+        "education": "Education:"
+      },
+      "no_staff": "Oops, No staff members match your search!"
+    }
+  },
+  "SchoolNewsPage": {
+    "banner": {
+      "title": "Home",
+      "description": "School News"
+    },
+    "main": {
+      "heading": "our latest NEWS",
+      "title": "Recent School News",
+      "search_placeholder": "Search for the News you want...",
+      "no_news": "Oops, No Blogs match your search!"
+    }
+  },
+  "SchoolNewsDetailPage": {
+    "breadcrumb": {
+      "first": "Home",
+      "second": "School News"
+    },
+    "main": {
+      "date": "date :",
+      "category": "category :",
+      "relatedpost_title": "Related Posts",
+      "toppost_title": "Top Posts",
+      "conslusion_title": "Conslusion"
+    }
+  },
+  "CurriculumPage": {
+    "banner": {
+      "title": "Home",
+      "description": "Curriculum"
+    },
+    "curriculum": {
+      "ehsan": {
+        "heading": "Ehsan",
+        "title": "Ehsan – Where Every Ability Finds Its Path",
+        "description": "Since 2008, Ehsan at the Salman Farsi Educational Complex has been a welcoming space for Students of Determination. Through expert support and a nurturing approach, we empower every student to unlock their potential and shape a brighter future.",
+        "expert_title": "Expert Teachers",
+        "expert_description": "A team of specialists providing high-quality education and rehabilitation.",
+        "comprehensive_title": "Comprehensive Support",
+        "comprehensive_description": "Ensuring equal opportunities for every student to succeed."
+      },
+      "guidance": {
+        "heading": "Elementary School",
+        "title": "From Foundational Excellence to Future Success",
+        "title_2": "Expert Guidance and Advanced Facilities",
+        "description": "The primary education section (Grades 1 to 6) offers two classes per grade, focusing on strong academics and advanced language programs in Arabic and English taught by native-speaking experts. With experienced teachers, innovative methods, and smart classrooms, we ensure an engaging and personalized learning experience."
+      },
+      "middle_school": {
+        "heading": "Middle school",
+        "title": "Talented Educators, Modern Facilities, and Advanced Methods",
+        "description": "Middle school (grades 7 to 9) at Salman Farsi School offers a modern learning environment with smart classrooms and expert teachers. Each grade has two classes, supported by advanced teaching methods.The school provides extracurricular programs, science labs, sports facilities, and amenities, ensuring students grow academically and personally while preparing for future challenges.",
+        "key_title": "Key Focus: Consistency and Excellence",
+        "key_description": "We focus on consistency and timely progress for student success."
+      },
+      "highschool": {
+        "heading": "High school",
+        "title": "Experienced Educators, Specialized Facilities, and Cutting-Edge Programs",
+        "description": "High school (grades 10 to 12) at Salman Farsi School is guided by a team of experienced educators, many of whom are university professors specializing in science, humanities, mathematics, physics, and web development.",
+        "list": [
+          {
+            "title": "Advanced Science Instruction",
+            "description": "Professors provide expert guidance in biology, chemistry, and physics for academic success."
+          },
+          {
+            "title": "Web Development Excellence",
+            "description": "Students gain hands-on experience in modern computer labs tailored for web development."
+          },
+          {
+            "title": "State-of-the-Art Science Labs",
+            "description": "Fully equipped labs enable practical experiments in core sciences."
+          },
+          {
+            "title": "Tailored Extracurricular Programs",
+            "description": "Diverse activities support students in humanities, mathematics, and technology."
+          }
+        ]
+      },
+      "meetus": {
+        "title": "Come and meet us",
+        "description": "Register for a meeting with our School Leadership Team and visit our incredible campus.",
+        "link": "See More"
+      }
+    }
+  },
+  "Curriculum_Detail": {
+    "ehsan": {
+      "banner": {
+        "banner_title": "Curriculum",
+        "banner_subtitle": "Ehsan"
+      },
+      "main": {
+        "introduction_title": " Introduction to Ehsan – Salman Farsi Educational Complex",
+        "introduction_description_1": "The Salman Farsi Educational Complex is committed to supporting Students of Determination (SOD) in their journey toward growth and development. Established in 1995, the complex has welcomed hundreds of students over the years. In 2008, it launched its first specialized department, named Ehsan, to provide educational and rehabilitation services to students with special needs.",
+        "introduction_description_2": "The primary goal of Ehsan is to recognize the potential and capabilities of all students while creating opportunities for their enrichment and learning. We believe in equality and equal opportunities for everyone, striving to provide a supportive environment where students can shape a brighter future for themselves.",
+        "objectives_title": "Objectives of Ehsan:",
+        "objectives_list": [
+          "To offer learning experiences that enable students to achieve their full potential.",
+          "To create a positive environment where students can build self-confidence and self-respect.",
+          "To value the needs and perspectives of Students of Determination and address their aspirations.",
+          "To ensure that students with special needs can integrate into society with appropriate ethical values and vocational skills.",
+          "To develop students—not just those with special needs but all students—into responsible citizens equipped with proper social etiquette, ethics, and values to contribute to their future."
+        ],
+        "speech_title": "Speech Therapy – A Key Rehabilitation Service in Ehsan",
+        "speech_description": "The speech therapy unit within Ehsan focuses on assessing and treating speech and language disorders in students. This service plays a crucial role in enhancing students' communication skills, as speech and language are vital tools for interaction.",
+        "Area_title": "Areas of Speech Therapy Services:",
+        "area_list": [
+          "Delayed Speech and Language Development: For children who lack an environment conducive to speech and language development or have intellectual disabilities.",
+          "Articulation Disorders: Arising from coordination issues in tongue muscles, hearing impairments, or sensory weaknesses in the oral region.",
+          "Stuttering: Speech characterized by repetition, prolongation, pauses, or blocks, sometimes caused by vocabulary deficiencies or neurological disorders.",
+          "Learning Disorders: Including challenges related to reading and writing."
+        ],
+        "services_title": "Services Provided by the Speech Therapy Unit:",
+        "services_list": [
+          "Planning and precise implementation of treatment programs.",
+          "Counseling and guiding families.",
+          "Initial evaluation and determination of the severity of speech and language disorders.",
+          "Enhancing sensory-motor systems and foundational speech skills, including chewing and swallowing.",
+          "Improving students' communication skills using behavioral, cognitive, and linguistic approaches."
+        ],
+        "services_description": "With a combination of dedication and expertise, the Ehsan department supports students with special needs, helping them confidently navigate their path to success and empowerment."
+      }
+    }
+  },
+  "TermsAndConditionPage": {
+    "banner": {
+      "title": "Home",
+      "description": "Registration Terms"
+    },
+    "terms": {
+      "admission_criteria": "Salman Farsi School Registration Instructions",
+      "admission_link": "Read the Complete Code of Conduct",
+      "admission_description": "Prior to registration, it is mandatory to read and accept the Code of Conduct. By registering at Salman Farsi School, you agree to adhere to all school policies.",
+      "enrollment_info_title": "Required Documents for Registration:",
+      "enrollment_info_content": "Before starting the online registration process, ensure you have the following files ready:",
+      "enrollment_info_list": [
+        "Student’s Passport Photo (white background).",
+        "Copy of Emirates ID.",
+        "Copy of Passport’s First Page.",
+        "Birth Certificate Copy.",
+        "National ID Copy.",
+        "Translated Copy of Latest Academic Certificate (for new students)."
+      ],
+      "transportation_title": "Student Transportation Services:",
+      "transportation_content": "Salman Farsi School provides daily transportation services for over 170 students across Dubai, Sharjah, and Ajman. The services are coordinated by Mr. Farrokhi-Nejad (Contact: +971507840067), ensuring compliance with RTA regulations.",
+      "transportation_route": "Transportation Routes:",
+      "routestop_list": [
+        "Qafiya - Sharjah School - First Al Taawun Roundabout - Al Muteena - Old Market - Iranian Bazaar - Export Bank - National Bank - King Faisal Road - Al Majaz - Al Qasba - Al Rolla - Umm Khanour - Al Majaz 1 & 2, Sharjah",
+        "Industrial Area Main Street - Al Rawda 1 & 2 - Al Hamidiya - Al Mowaihat - Al Jurf - Sheikh Bin Zayed Road - Al Yasmeen - Khansaheb",
+        "Ajman, GMC Hospital - Kuwait Junction - Al Nuaimiya 2 & 3 - Al Ain Markets - Al Corniche - Al Rashidiya - Fish Market - Al Khor Towers - Al Karama Area - Mushairif Park, Ajman",
+        "Al Safa - Mirdif - Al Rashidiya - Nad Al Hamar - Al Warqa - Oud Al Muteena - Muhaisnah 2 - Al Qusais - Mirdif City",
+        "Bur Dubai - Al Mankhool - Musalla near Cemetery - Meena Bazaar - Port Rashid - Jafliya Junction - Satwa Road - Al Wasl Junction - Al Quoz 2 & 4 - Behind Spinneys, Jumeirah",
+        "Al Nahda Park, Sharjah - Main Street Al Taawun - Ansar Mall - Al Nahda Sharjah 2 - Sahara Centre - Behind Etisalat Al Nahda - Behind Ansar Mall",
+        "Abu Hail - Hor Al Anz - Al Muteena - Fish Roundabout - Naif - Al Karama - Al Hamriya - Al Ras - Al Nahda 2, Dubai"
+      ],
+      "tuition_fees_title": "Tuition Fees for the Academic Year 2024-2025:",
+      "basic_tuition_fees": "Basic Tuition Fees:",
+      "tuition_fees": {
+        "table_headers": {
+          "grade": "GRADE",
+          "tuition_fee": "TUITION FEE (AED)"
+        },
+        "rows": [
+          {
+            "grade": "GRADES 1 TO 5",
+            "tuition_fee": "4,587 AED"
+          },
+          {
+            "grade": "GRADE 6",
+            "tuition_fee": "5,633 AED"
+          },
+          {
+            "grade": "GRADES 7 AND 8",
+            "tuition_fee": "5,285 AED"
+          },
+          {
+            "grade": "GRADE 9",
+            "tuition_fee": "5,633 AED"
+          },
+          {
+            "grade": "GRADES 10 TO 12",
+            "tuition_fee": "6,720 AED"
+          }
+        ]
+      },
+      "transportation_fees_title": "Transportation Fees:",
+      "transportation_fees": {
+        "table_headers": {
+          "route": "ROUTE",
+          "transportation_fee": "TRANSPORTATION FEE (AED)"
+        },
+        "rows": [
+          {
+            "route": "DUBAI",
+            "transportation_fee": "5,750 AED"
+          },
+          {
+            "route": "SHARJAH",
+            "transportation_fee": "6,250 AED"
+          },
+          {
+            "route": "AJMAN",
+            "transportation_fee": "6,750 AED"
+          }
+        ]
+      },
+      "payment_method_title": "Payment Methods:",
+      "payment_method_list": {
+        "methods": [
+          "Full cash payment",
+          "Payment in two installments:",
+          "First Installment: Due by 10/12/2024.",
+          "Second Installment: Due by 15/03/2025.",
+          "Minimum advance payment includes tuition, books, insurance, health services, and extracurricular activities:",
+          "Primary Level: 2,500 AED.",
+          "Middle School: 3,000 AED.",
+          "High School: 3,200 AED."
+        ]
+      },
+      "apply_title": "Apply for Admission",
+      "apply_content": "To apply for admission, please fill out the following form and submit it to our office.",
+      "apply_button": "Apply Now"
+    }
+  },
+  "PrivacyPolicyPage": {
+    "banner": {
+      "title": "Home",
+      "description": "Privacy Policy"
+    },
+    "privacy_policy": {
+      "privacy_policy_title": "Privacy Policy",
+      "privacy_policy_description": "At [Your Company Name], we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and protect your data when you visit our website [Your Website URL] or interact with our services.",
+      "privacy_policy_list": [
+        {
+          "title": "Information We Collect",
+          "content": "We may collect personal information, such as your name, email address, phone number, and any other information you provide through forms or other methods of communication. We may also collect non-personal information such as your IP address, browser type, and usage data through cookies and similar technologies."
+        },
+        {
+          "title": "How We Use Your Information",
+          "content": "We use the information we collect to:",
+          "list": [
+            "Provide and improve our services.",
+            "Respond to your inquiries and support requests.",
+            "Send you newsletters, promotional materials, or other information you have requested (with your consent).",
+            "Monitor and analyze website usage to improve user experience.",
+            "Comply with legal obligations and enforce our terms of service."
+          ]
+        },
+        {
+          "title": "Cookies and Tracking Technologies",
+          "content": "Our website uses cookies to enhance your experience and analyze site traffic. You can control cookie settings through your browser, but please note that disabling cookies may affect some features of the website."
+        },
+        {
+          "title": "Sharing Your Information",
+          "content": "We do not sell, trade, or rent your personal information to third parties. However, we may share information with trusted partners or service providers who assist us in operating our website, conducting business, or providing services to you, as long as they agree to keep your information confidential. We may also disclose your information if required by law or to protect our rights."
+        },
+        {
+          "title": "Data Security",
+          "content": "We take reasonable precautions to protect your personal information from unauthorized access, use, or disclosure. However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee absolute security."
+        },
+        {
+          "title": "Your Rights",
+          "content": "Depending on your location and applicable laws, you may have the right to:",
+          "list": [
+            "Access, correct, or delete your personal data.",
+            "Object to the processing of your personal data.",
+            "Withdraw consent for certain processing activities."
+          ],
+          "content_2": "If you wish to exercise these rights, please contact us at [Your Contact Information]."
+        },
+        {
+          "title": "Third-Party Links",
+          "content": "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated date. We encourage you to review this policy periodically to stay informed about how we are protecting your information."
+        },
+        {
+          "title": "Contact Us",
+          "content": "If you have any questions or concerns about this Privacy Policy or our practices, please contact us at:[ email school]"
+        }
+      ]
+    }
+  },
+  "FaqPage": {
+    "banner": {
+      "title": "Home",
+      "description": "FAQ"
+    },
+    "faq": {
+      "small_title": "FAQ",
+      "title": "Frequently Asked Questions",
+      "description": "Explore answers to common questions about our school, including admissions, fees, and academic programs.",
+      "questions": [
+        {
+          "question": "What languages are used for instruction at the school?",
+          "answer": "The primary language of instruction at our school is Persian, while English and Arabic are also included in the curriculum to enhance students' language skills."
+        },
+        {
+          "question": "What is the registration process, and what are the required documents and timeline?",
+          "answer": "To register at the school, parents need to visit the school in person and provide required documents such as birth certificate, ID card, health certificate, passport-sized photo, and previous academic records. For detailed information and to confirm the necessary documents, please contact the school before visiting. Registration typically occurs in June and July, and late registrations will incur an additional penalty fee."
+        },
+        {
+          "question": "What are the tuition fees and what do they cover?",
+          "answer": "Tuition fees vary depending on the grade level and chosen specialization. The fees cover educational costs, textbooks, extracurricular activities, and basic school services. For more precise details, please contact the school's finance department."
+        },
+        {
+          "question": "How does the school handle student transportation?",
+          "answer": "The school provides safe and reliable transportation services for students. The bus services include well-equipped buses with skilled drivers, and routes are closely monitored. For more information and to register for transportation, please contact the school's transportation department."
+        },
+        {
+          "question": "Does the school have a program for students who require special support?",
+          "answer": "Yes, our school offers specialized programs to support students with special needs. These programs include individualized teaching and psychological and social support to help students succeed in the educational environment."
+        },
+        {
+          "question": "What are the school working hours and official holidays?",
+          "answer": "The school operates from Monday to Friday, from 7 AM to 4 PM. Saturdays are reserved for administrative tasks. Official holidays include summer vacation, Nowruz break, Ramadan break, and national holidays."
+        }
+      ]
+    }
+  },
+  "FacilitiesPage": {
+    "banner": {
+      "title": "Home",
+      "description": "Facilities"
+    },
+    "facilities": {
+      "main": {
+        "title": "Salman Farsi Educational Complex",
+        "title_description": "A Thriving Environment for Growth and Learning",
+        "description": "The Salman Farsi Educational Complex offers a dynamic setting designed to foster comprehensive student development in academic, athletic, cultural, and social spheres. Equipped with modern infrastructure and state-of-the-art facilities, the complex is dedicated to nurturing creative, committed, and capable individuals prepared to excel in various aspects of life."
+      },
+      "FacilitiesAndServices": {
+        "title": "Facilities and Services",
+        "classroom": {
+          "title": "Smart Classrooms and Modern Educational Tools",
+          "description": "Each classroom is outfitted with smart boards, advanced projectors, and audio-visual systems, enabling interactive and engaging learning experiences. By integrating cutting-edge educational technologies, the complex enhances learning quality and actively involves students in the educational process."
+        },
+        "labs": {
+          "title": "Advanced Scientific Laboratories",
+          "description": "The complex features fully equipped laboratories for chemistry and biology, providing a practical and stimulating environment for experiments, research projects, and skill enhancement in the sciences."
+        },
+        "library": {
+          "title": "Comprehensive Library",
+          "description": "With thousands of printed books, the library offers a quiet, resourceful space for study and research. Digital search tools and access to scientific resources further support students in achieving academic and research excellence."
+        },
+        "sports": {
+          "title": "Sports Facilities and Recreation Areas",
+          "items": [
+            "Multiple grass sports fields",
+            "Multifunctional indoor sports halls",
+            "Facilities for activities such as football, volleyball, basketball, and table tennis"
+          ],
+          "conclusion": "These amenities, coupled with organized sports programs, encourage physical health and teamwork."
+        },
+        "cultural": {
+          "title": "Cultural and Artistic Activities",
+          "items": [
+            "National and religious celebrations",
+            "Art exhibitions and creativity workshops",
+            "Training in arts such as painting, music, and theater"
+          ]
+        },
+        "prayerHall": {
+          "title": "Prayer Hall and Religious Programs",
+          "description": "The prayer hall provides a welcoming environment for congregational prayers, Quranic sessions, and ethical discussions, fostering students' spiritual and moral growth."
+        },
+        "healthClinic": {
+          "title": "Health Clinic and Wellness Services",
+          "description": "Supervised by qualified medical professionals, the health clinic offers:",
+          "items": [
+            "Routine medical check-ups",
+            "Vaccination programs",
+            "Nutritional and psychological counseling"
+          ],
+          "conclusion": "These services aim to maintain and improve the physical and mental health of students."
+        },
+        "counseling": {
+          "title": "Counseling and Guidance Services",
+          "description": "Professional counselors support students academically, emotionally, and socially through:",
+          "items": [
+            "Individual and group counseling",
+            "Life skills workshops",
+            "Career guidance sessions"
+          ]
+        },
+        "cafeteria": {
+          "title": "Hygienic Cafeteria with Nutritious Meals",
+          "description": "The cafeteria ensures access to healthy, nutritious meals and snacks, promoting balanced diets to sustain student energy and overall well-being."
+        },
+        "specialNeeds": {
+          "title": "Support for Students with Special Needs",
+          "description": "Specialized services cater to students with unique needs, including:",
+          "items": [
+            "Speech therapy and rehabilitation",
+            "Personalized counseling",
+            "Social skills development programs"
+          ]
+        },
+        "safety": {
+          "title": "Safety and Crisis Preparedness",
+          "description": "The complex adheres to rigorous safety protocols, providing courses on crisis management, fire safety, and earthquake preparedness to equip students for emergencies.",
+          "keyFocus": "Key Focus: Crisis Management Training",
+          "keyFocusDescription": "We empower students with the knowledge and skills to handle emergencies effectively, preparing them for any unexpected situation."
+        }
+      }
+    }
+  }
+}
