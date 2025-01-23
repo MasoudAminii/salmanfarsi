@@ -124,7 +124,7 @@ const page = () => {
               <div className="content py-8 sm:py-14 lg:px-14">
                 <div className="title mb-2">
                   <h3 className="mb-2 text-2xl font-bold text-[#170F49]">
-                    Student's personal details:
+                    Students personal details:
                   </h3>
                   <p className="text-lg text-[#6F6C90]">
                     Lorem ipsum dolor sit amet consectetur adipisc.
@@ -132,7 +132,7 @@ const page = () => {
                 </div>
                 <div className="profile mb-4">
                   <p className="mb-4 text-[#170F49]">
-                    Student's personal photo
+                    Students personal photo
                   </p>
                   <div className="profile-container flex flex-wrap items-center gap-4 gap-y-0">
                     <div className="profile-image relative min-h-[62px] min-w-[62px] overflow-hidden rounded-full">
@@ -190,7 +190,7 @@ const page = () => {
                       </div>
                       <div className="fathername">
                         <Label htmlFor="lastname" className="mb-2">
-                          Father's name
+                          Fathers name
                         </Label>
                         <div className="relative">
                           <Input

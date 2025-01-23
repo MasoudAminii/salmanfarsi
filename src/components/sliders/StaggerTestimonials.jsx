@@ -35,10 +35,8 @@ const facilities_images = [
 const StaggerTestimonials = () => {
   const t = useTranslations("HomePage.About");
   const facilities = t.raw("facilities");
-  if (!Array.isArray(facilities)) {
-    console.error("facilities is not an array:", facilities);
-    return null;
-  }
+
+  // Hooks are called unconditionally
   const isMdOrAbove = useMediaQuery("(min-width: 768px)");
   const sliderItemWidth = isMdOrAbove ? 508 : 338;
   const [currentSlider, setCurrentSlider] = useState(0);
@@ -54,6 +52,12 @@ const StaggerTestimonials = () => {
 
     return () => clearInterval(interval); // Cleanup interval
   }, [facilities.length, sliderItemWidth]);
+
+  // Early return after hooks
+  if (!Array.isArray(facilities)) {
+    console.error("facilities is not an array:", facilities);
+    return null;
+  }
 
   const prevSlide = () => {
     setCurrentSlider((prev) => (prev === 0 ? facilities.length - 1 : prev - 1));
