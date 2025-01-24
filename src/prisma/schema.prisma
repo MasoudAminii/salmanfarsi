@@ -3,11 +3,11 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
-model admin {
+model Admin {
   id       Int     @id @default(autoincrement())
   username String  @db.VarChar(255)
   password String  @db.VarChar(255)
@@ -15,44 +15,44 @@ model admin {
   role     String? @db.VarChar(50)
 }
 
-model contact_us {
+model ContactUs {
   id          Int      @id @default(autoincrement())
   name        String   @db.VarChar(255)
   email       String   @db.VarChar(255)
   phone       String?  @db.VarChar(50)
   subject     String?  @db.VarChar(255)
   message     String   @db.Text
-  submit_date DateTime @default(now()) @db.Timestamp(0)
+  submit_date DateTime @default(now())
 }
 
-model categories {
-  category_id      Int     @id @default(autoincrement())
-  category_name    String? @db.VarChar(50)
-  category_name_en String? @db.VarChar(225)
-  post             post[]
+model Category {
+  id      Int     @id @default(autoincrement())
+  name    String? @db.VarChar(50)
+  name_en String? @db.VarChar(225)
+  posts   Post[]
 }
 
-model post {
-  id           Int        @id @default(autoincrement())
-  slug         String     @unique(map: "slug") @db.VarChar(255)
-  publish_date DateTime   @db.DateTime(0)
-  title        String     @db.VarChar(255)
-  title_en     String     @db.Text
-  main_image   String     @db.VarChar(255)
-  content1     String     @db.Text
-  content1_en  String     @db.Text
-  image1       String?    @db.VarChar(255)
-  image2       String?    @db.VarChar(255)
-  content2     String?    @db.Text
-  content2_en  String?    @db.Text
-  views        Int        @default(0)
+model Post {
+  id           Int      @id @default(autoincrement())
+  slug         String   @unique @db.VarChar(255)
+  publish_date DateTime @default(now())
+  title        String   @db.VarChar(255)
+  title_en     String   @db.Text
+  main_image   String   @db.VarChar(255)
+  content1     String   @db.Text
+  content1_en  String   @db.Text
+  image1       String?  @db.VarChar(255)
+  image2       String?  @db.VarChar(255)
+  content2     String?  @db.Text
+  content2_en  String?  @db.Text
+  views        Int      @default(0)
   category_id  Int
-  categories   categories @relation(fields: [category_id], references: [category_id], map: "Post_category_id_fkey")
+  category     Category @relation(fields: [category_id], references: [id])
 
-  @@index([category_id], map: "category_id")
+  @@index([category_id])
 }
 
-model staff {
+model Staff {
   id           Int     @id @default(autoincrement())
   name_fa      String  @db.VarChar(255)
   name_en      String  @db.VarChar(225)
@@ -64,13 +64,13 @@ model staff {
   photo_url    String? @db.VarChar(255)
 }
 
-model reviews {
+model Review {
   id          Int     @id @default(autoincrement())
   name_fa     String  @db.VarChar(100)
   name_en     String  @db.VarChar(100)
   position_fa String  @db.VarChar(100)
   position_en String  @db.VarChar(100)
-  review_fa   String  @db.LongText
-  review_en   String  @db.LongText
+  review_fa   String  @db.Text
+  review_en   String  @db.Text
   image_url   String? @db.VarChar(255)
 }
