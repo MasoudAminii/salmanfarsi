@@ -34,13 +34,14 @@ export async function generateMetadata({ params }) {
 }
 
 export async function generateStaticParams() {
-  const blogs = await prisma.post.findMany({
-    select: { slug: true },
-  });
-
-  return blogs.map((post) => ({ params: { slug: post.slug } }));
+  try {
+    const posts = await prisma.post.findMany();
+    return posts.map((post) => ({ slug: post.slug }));
+  } catch (error) {
+    console.error("Error in generateStaticParams:", error);
+    return []; // Return an empty array on error
+  }
 }
-
 const page = async ({ params }) => {
   const locale = params.locale || "en";
   const t = await getTranslations("SchoolNewsDetailPage");
