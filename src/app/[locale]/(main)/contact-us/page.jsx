@@ -7,18 +7,21 @@ import {
   HiOutlinePhoneIncoming,
   HiLocationMarker,
 } from "react-icons/hi";
+import { getTranslations } from "next-intl/server";
 
 export const metadata = {
   title: "Conatct Us",
 };
-const page = () => {
+const page = async () => {
+  const t = await getTranslations("ContactUsPage");
+
   return (
     <div>
       <section className="Banner">
         <TextParallax
-          subheading={"home"}
+          subheading={t("banner.title")}
           imgUrl={"/banner/banner (5).jpg"}
-          heading={"Contact Us"}
+          heading={t("banner.description")}
         />
       </section>
       <section className="ContactUs px-4 py-14 md:px-8 md:py-20">
@@ -34,36 +37,40 @@ const page = () => {
             </div>
             <div className="Contact-Text max-w-[600px] flex-auto p-2">
               <div className="ContactTitle">
-                <h4 className="mb-2 text-4xl font-bold capitalize sm:text-5xl">
-                  Well respond to you in <br className="max-xl:hidden" /> an
-                  hour.
+                <h4 className="mb-2 text-3xl font-bold capitalize md:text-4xl lg:text-5xl">
+                  {t("contact.title")}
                 </h4>
-                <p className="text-[#504E4E]">
-                  Neque porro est qui dolorem ipsum quia quaed inventor
-                  veritatis et
-                </p>
+                <p className="text-[#504E4E]">{t("contact.description")}</p>
               </div>
               <form action="">
                 <div className="Form-Container md mt-6 flex flex-col gap-4 rounded-2xl p-6 py-8 shadow-lg shadow-gray-400">
                   <p className="text-xl font-bold capitalize text-[var(--secondary-color)]">
-                    get in touch
+                    {t("contact.form.getintouch")}
                   </p>
                   <div className="Inputs flex flex-wrap gap-4 md:flex-nowrap">
-                    <Input variant="faded" type="Name" label="Name" />
-                    <Input variant="faded" type="Email" label="Email" />
+                    <Input
+                      variant="faded"
+                      type="Name"
+                      label={t("contact.form.name")}
+                    />
+                    <Input
+                      variant="faded"
+                      type="Email"
+                      label={t("contact.form.email")}
+                    />
                   </div>
                   <div className="Textarea">
                     <Textarea
                       variant="faded"
-                      label="Description"
-                      placeholder="Enter your description"
+                      label={t("contact.form.message.label")}
+                      placeholder={t("contact.form.message.placeholder")}
                       minRows={7}
                       className="w-full"
                     />
                   </div>
                   <div className="Submit">
                     <button className="w-fit rounded-[100px] bg-[#EAF3F8] px-6 py-4 text-sm font-bold uppercase text-[var(--secondary-color)] transition-all duration-300 hover:bg-[#635ad9] hover:text-white">
-                      Send message
+                      {t("contact.form.submit")}
                     </button>
                   </div>
                 </div>

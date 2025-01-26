@@ -665,5 +665,25 @@
         }
       }
     }
+  },
+  "ContactUsPage": {
+    "banner": {
+      "title": "خانه",
+      "description": "تماس با ما"
+    },
+    "contact": {
+      "title": "تماس با ما - مدرسه ایرانی سلمان فارسی",
+      "description": "لطفاً فرم زیر را برای تماس با ما پر کنید.",
+      "form": {
+        "getintouch": "ارتباط با ما",
+        "name": "نام",
+        "email": "ایمیل",
+        "message": {
+          "label": "پیام",
+          "placeholder": "پیام خود را وارد کنید"
+        },
+        "submit": "ارسال"
+      }
+    }
   }
 }

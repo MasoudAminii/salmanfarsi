@@ -135,7 +135,7 @@ function MainHomeAnimation() {
             </div>
             <div className="size-11 overflow-hidden rounded-full border-[3px] border-white bg-[#C4C4C4]">
               <Image
-                src={`/students/student-3.JPG`}
+                src={`/students/student-3.jpg`}
                 alt="student"
                 quality={100}
                 priority

@@ -665,5 +665,25 @@
         }
       }
     }
+  },
+  "ContactUsPage": {
+    "banner": {
+      "title": "Home",
+      "description": "Contact Us"
+    },
+    "contact": {
+      "title": "Contact Us - Salman Farsi Iranian School",
+      "description": "Please fill out the form below to contact us.",
+      "form": {
+        "getintouch": "get in touch",
+        "name": "Name",
+        "email": "Email",
+        "message": {
+          "label": "Message",
+          "placeholder": "Enter Your Message"
+        },
+        "submit": "Submit"
+      }
+    }
   }
 }

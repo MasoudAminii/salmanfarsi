@@ -1,5 +1,4 @@
 import ViewCounter from "@/components/actions/ViewCounter";
-import TextParallax from "@/components/animations/TextParallax";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -35,13 +34,14 @@ export async function generateMetadata({ params }) {
 
 export async function generateStaticParams() {
   try {
-    const posts = await prisma.post.findMany();
+    const posts = await prisma.post.findMany({ select: { slug: true } });
     return posts.map((post) => ({ slug: post.slug }));
   } catch (error) {
     console.error("Error in generateStaticParams:", error);
-    return []; // Return an empty array on error
+    return [];
   }
 }
+
 const page = async ({ params }) => {
   const locale = params.locale || "en";
   const t = await getTranslations("SchoolNewsDetailPage");
@@ -54,7 +54,9 @@ const page = async ({ params }) => {
 
   if (!blog) {
     notFound();
+    return null;
   }
+
   const formatedDate = new Date(blog.publish_date).toLocaleDateString();
   return (
     <div className="NewsPage">

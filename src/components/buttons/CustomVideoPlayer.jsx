@@ -23,8 +23,7 @@ export default function CustomVideoPlayer() {
       <video
         ref={videoRef}
         className="w-full"
-        muted
-        src=""
+        src="/video/school-video.mp4"
         onPause={() => setIsPlaying(false)} // Sync state if video is paused externally
         onPlay={() => setIsPlaying(true)} // Sync state if video is played externally
       ></video>
