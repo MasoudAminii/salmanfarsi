@@ -34,7 +34,11 @@ export async function generateMetadata({ params }) {
 
 export async function generateStaticParams() {
   try {
-    const posts = await prisma.post.findMany({ select: { slug: true } });
+    const posts = await prisma.post.findMany({
+      select: { slug: true },
+      orderBy: { publish_date: "desc" },
+      // Remove take: 6 for testing
+    });
     return posts.map((post) => ({ slug: post.slug }));
   } catch (error) {
     console.error("Error in generateStaticParams:", error);
@@ -43,19 +47,24 @@ export async function generateStaticParams() {
 }
 
 const page = async ({ params }) => {
-  const locale = params.locale || "en";
   const t = await getTranslations("SchoolNewsDetailPage");
+  const locale = params.locale || "en";
+  if (!params.slug) {
+    console.error("Missing slug parameter");
+    notFound();
+  }
+
   const [blog, topPosts] = await Promise.all([
-    getBlog(params.slug), // Fetch the blog post
-    getTopPosts(), // Fetch top posts
+    getBlog(params.slug),
+    getTopPosts(),
   ]);
 
-  const relatedPosts = await getRelatedPosts(blog.category_id, blog.slug);
-
   if (!blog) {
+    console.error(`Blog not found for slug: ${params.slug}`);
     notFound();
-    return null;
   }
+
+  const relatedPosts = await getRelatedPosts(blog.category_id, blog.slug);
 
   const formatedDate = new Date(blog.publish_date).toLocaleDateString();
   return (
