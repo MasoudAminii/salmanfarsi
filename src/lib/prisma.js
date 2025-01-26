@@ -2,14 +2,14 @@ import prisma from "@/lib/db";
 import { unstable_noStore as noStore } from "next/cache";
 export async function getBlog(slug) {
   try {
-    const decodedSlug = decodeURIComponent(slug);
-    return prisma.post.findUnique({
-      where: { slug: decodedSlug },
+    const blog = await prisma.post.findUnique({
+      where: { slug },
       include: { categories: true },
     });
-  } catch (err) {
-    console.error("Error fetching blog:", err);
-    throw err;
+    return blog;
+  } catch (error) {
+    console.error("Error fetching blog:", error);
+    return null;
   }
 }
 
