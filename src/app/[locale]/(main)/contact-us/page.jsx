@@ -1,7 +1,7 @@
 import TextParallax from "@/components/animations/TextParallax";
 import Image from "next/image";
 import { Input, Textarea } from "@nextui-org/react";
-// import ImageContact from "@/public/skeleton/Contact.png";
+import ImageContact from "../../../../../public/skeleton/Contact.png";
 import {
   HiOutlineMail,
   HiOutlinePhoneIncoming,
@@ -15,7 +15,11 @@ const page = () => {
   return (
     <div>
       <section className="Banner">
-        <TextParallax subheading={"home"} imgUrl={"#"} heading={"Contact Us"} />
+        <TextParallax
+          subheading={"home"}
+          imgUrl={"/banner/banner (5).jpg"}
+          heading={"Contact Us"}
+        />
       </section>
       <section className="ContactUs px-4 py-14 md:px-8 md:py-20">
         <div className="Contact-Container mx-auto max-w-screen-2xl">

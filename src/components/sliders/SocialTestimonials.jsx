@@ -95,11 +95,11 @@ const SocialTestimonials = ({ reviews }) => {
             <h3 className="mb-4 inline-block bg-gradient-to-r from-[#635AD9] to-[#219BE4] bg-clip-text font-semibold uppercase text-transparent">
               {t("reviews.heading")}
             </h3>
-            <h4 className="text-4xl font-bold capitalize text-black lg:text-5xl rtl:leading-[4rem]">
+            <h4 className="text-3xl font-bold capitalize text-black md:text-4xl lg:text-5xl rtl:leading-normal">
               {t("reviews.title")}
             </h4>
           </div>
-          <div className="slider-button flex flex-auto items-end gap-2 sm:w-1/3 sm:justify-end rtl:flex-row-reverse">
+          <div className="slider-button flex flex-auto items-end gap-2 sm:w-1/3 ltr:sm:justify-end rtl:flex-row-reverse rtl:max-sm:justify-end">
             <button
               onClick={prevSlide}
               className="rounded-full border-2 border-[var(--secondary-color)] p-4 text-xl text-[var(--secondary-color)] transition-all hover:bg-[var(--secondary-color)] hover:text-white"
@@ -128,11 +128,10 @@ const SocialTestimonials = ({ reviews }) => {
               const isActive = currentSlider === index; // Ensure correct active index
               return (
                 <div
-                  dir="rtl"
                   key={index}
                   className={`${isActive ? "opacity-100" : "opacity-50"} group relative flex min-h-[420px] w-[330px] flex-auto overflow-hidden rounded-[30px] border bg-white p-6 transition-all duration-300 md:min-h-[550px] md:w-[500px]`}
                 >
-                  <div className="content flex flex-col justify-between">
+                  <div className="content flex flex-col justify-between rtl:text-end">
                     <div className="Text">
                       <p className="icon mb-6 text-2xl font-bold">
                         <Image src={TestimonialIcon} alt="testimonial" />
@@ -141,7 +140,7 @@ const SocialTestimonials = ({ reviews }) => {
                         {locale == "en" ? item?.review_en : item?.review_fa}
                       </p>
                     </div>
-                    <div className="Profile flex items-center gap-4">
+                    <div className="Profile flex items-center gap-4 rtl:flex-row-reverse">
                       <div className="relative size-20 min-w-[80px] overflow-hidden rounded-full bg-[#C4C4C4] md:size-32 md:min-w-[128px]">
                         <Image
                           src={`/schoolstaff/Akhlasi.png`}

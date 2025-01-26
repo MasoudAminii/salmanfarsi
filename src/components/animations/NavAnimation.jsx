@@ -118,6 +118,10 @@ const NavAnimation = () => {
     pathName === `/${locale}` ||
     pathName === `/${locale}/admission` ||
     pathName.startsWith(`/${locale}/school-news/`);
+
+  const bgColor =
+    pathName === `/${locale}/admission` ||
+    pathName.startsWith(`/${locale}/school-news/`);
   return (
     <>
       <nav
@@ -128,8 +132,8 @@ const NavAnimation = () => {
       >
         <motion.div
           className={`mx-auto max-w-screen-xl rounded-b-[30px] ${
-            hasScrolled ? "bg-[#EDF6FF]" : "bg-transparent"
-          } transition-colors duration-300`}
+            hasScrolled ? "bg-[#EDF6FF]" : ""
+          } transition-colors duration-300 ${bgColor ? "bg-[#EDF6FF]" : ""}`}
         >
           <div className="top-nav min-h-[50px] rounded-b-[30px] bg-[#17012C] px-4 py-2 sm:px-6">
             <div className="contact-container flex min-h-[53px] flex-wrap items-center justify-center sm:justify-between">
@@ -242,7 +246,7 @@ const NavAnimation = () => {
               </div>
               <div className="mobile-menu flex gap-2 md:hidden">
                 <div className="Icons flex items-center justify-center gap-2">
-                  <div className="search">
+                  <div className="search max-xs:hidden">
                     <Link
                       href={"/search"}
                       className={`relative flex h-10 w-10 items-center justify-center rounded-full ${!isHomePage && !hasScrolled ? "bg-[var(--secondary-color)] hover:bg-white hover:text-[var(--primary-color)]" : "bg-[var(--primary-color)] hover:bg-[var(--secondary-color)]"} text-white transition-colors`}
@@ -389,7 +393,12 @@ const MobileMenu = ({ isHomePage, hasScrolled }) => {
         },
         {
           label: t("curriculum"),
-          href: "/curriculum",
+          href: "/about-us/curriculum",
+          icon: <GiBookshelf size={iconSize} />,
+        },
+        {
+          label: t("facilities"),
+          href: "/about-us/facilities",
           icon: <GiBookshelf size={iconSize} />,
         },
       ],
@@ -403,11 +412,6 @@ const MobileMenu = ({ isHomePage, hasScrolled }) => {
           href: "/terms-and-conditions",
           icon: <BsShieldShaded size={iconSize} />,
         },
-        {
-          label: t("fees"),
-          href: "/fees",
-          icon: <BsCashCoin size={iconSize} />,
-        },
       ],
     },
     {
@@ -416,13 +420,8 @@ const MobileMenu = ({ isHomePage, hasScrolled }) => {
       drop: [
         {
           label: t("blogs"),
-          href: "/blogs",
+          href: "/school-news",
           icon: <GiNewspaper size={iconSize} />,
-        },
-        {
-          label: t("imageGallery"),
-          href: "/image-gallery",
-          icon: <BsImages size={iconSize} />,
         },
       ],
     },

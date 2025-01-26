@@ -86,11 +86,11 @@ const StaggerTestimonials = () => {
             <h2 className="mb-4 inline-block bg-gradient-to-r from-[#635AD9] to-[#219BE4] bg-clip-text font-semibold uppercase text-transparent">
               {t("Testimonials-title")}
             </h2>
-            <h4 className="text-4xl font-bold sm:text-5xl rtl:leading-[4rem]">
+            <h4 className="text-3xl font-bold capitalize text-black md:text-4xl lg:text-5xl rtl:leading-normal">
               {t("Testimonials-description")}
             </h4>
           </div>
-          <div className="slider-button flex items-end gap-2 md:hidden rtl:flex-row-reverse">
+          <div className="slider-button flex items-end gap-2 md:hidden ltr:sm:justify-end rtl:flex-row-reverse rtl:max-md:justify-end">
             <button
               onClick={prevSlide}
               className="rounded-full border-2 border-[var(--secondary-color)] p-4 text-xl text-[var(--secondary-color)] transition-all hover:bg-[var(--secondary-color)] hover:text-white"

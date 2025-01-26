@@ -139,7 +139,7 @@ const HomeAbout = async () => {
           <div className="-translatey-1/2 absolute left-[19px] top-1/4 h-[60vw] max-h-[280px] w-[60vw] max-w-[279.88px] bg-[#B18CFF] blur-[200px] sm:h-[100vw] sm:w-[100vw] md:top-1/3"></div>
           <div className="-translatey-1/2 absolute right-10 top-3/4 h-[60vw] max-h-[280px] w-[60vw] max-w-[279.88px] bg-[#FC461ECC] blur-[200px] sm:h-[100vw] sm:w-[100vw] md:top-1/2"></div>
         </div>
-        <div className="About px-4 py-14 md:px-8 md:py-28">
+        <div className="About px-4 pb-14 pt-4 md:px-8 md:py-28">
           <div className="aboutContainer mx-auto flex max-w-screen-2xl flex-col justify-center">
             <div className="aboutWrapper flex items-center justify-center gap-6 max-md:flex-col">
               <div className="contentLeft z-20 flex w-full max-w-[570px] flex-1 flex-col gap-6">
@@ -223,7 +223,7 @@ const HomeAbout = async () => {
                 <h2 className="mb-4 font-semibold uppercase">
                   {t("video-title")}
                 </h2>
-                <h4 className="text-4xl font-bold lg:text-5xl rtl:leading-[4rem]">
+                <h4 className="text-3xl font-bold capitalize md:text-4xl lg:text-5xl rtl:leading-normal">
                   {t("video-description")}
                 </h4>
               </div>
@@ -341,12 +341,12 @@ const HomeServices = async () => {
               <h3 className="mb-4 inline-block bg-gradient-to-r from-[#635AD9] to-[#219BE4] bg-clip-text font-semibold uppercase text-transparent">
                 {t("title")}
               </h3>
-              <h2 className="mx-auto text-4xl font-bold capitalize text-white max-md:text-center sm:w-3/4 lg:text-5xl rtl:leading-[4rem]">
+              <h2 className="mx-auto text-3xl font-bold capitalize text-white max-md:text-center sm:w-3/4 md:text-4xl lg:text-5xl rtl:leading-normal">
                 {t("title-description")}
               </h2>
             </div>
             <span className="h-[1px] w-2/3 rounded-full bg-[#EAF3F8]/20" />
-            <div className="ContentContainer z-20 flex flex-wrap items-center justify-center gap-10">
+            <div className="ContentContainer z-20 flex flex-wrap items-center justify-center gap-4 gap-y-10 md:gap-10">
               {servicesList.map((service, index) => (
                 <div
                   key={index}
@@ -436,7 +436,7 @@ const RecentBlogs = async () => {
               <h3 className="mb-4 inline-block bg-gradient-to-r from-[#635AD9] to-[#219BE4] bg-clip-text font-semibold uppercase text-transparent">
                 {t("title")}
               </h3>
-              <h2 className="text-4xl font-bold capitalize text-black lg:text-5xl rtl:leading-[4rem]">
+              <h2 className="text-3xl font-bold capitalize text-black md:text-4xl lg:text-5xl rtl:leading-normal">
                 {t("title-description")}
               </h2>
             </div>
