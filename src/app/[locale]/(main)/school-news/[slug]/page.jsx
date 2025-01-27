@@ -261,6 +261,7 @@ const page = async ({ params }) => {
                           alt={post?.title_en}
                           fill
                           className="rounded-lg object-cover"
+                          sizes="(max-width: 640px) 100vw, 640px"
                           quality={100}
                         />
                       </div>

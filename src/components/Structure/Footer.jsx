@@ -42,19 +42,19 @@ const Footer = async () => {
   const curriculum = [
     {
       title: footer("main.curriculum_links.elemantryschool"),
-      href: "/about-us/curriculum",
+      href: "/about-us/curriculum#elementory school",
     },
     {
       title: footer("main.curriculum_links.middleschool"),
-      href: "/about-us/curriculum",
+      href: "/about-us/curriculum#middle school",
     },
     {
       title: footer("main.curriculum_links.highschool"),
-      href: "/about-us/curriculum",
+      href: "/about-us/curriculum#highschool",
     },
     {
       title: footer("main.curriculum_links.ehsan"),
-      href: "/about-us/curriculum",
+      href: "/about-us/curriculum#ehsan",
     },
   ];
 

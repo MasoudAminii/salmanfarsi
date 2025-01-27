@@ -143,8 +143,8 @@ const SocialTestimonials = ({ reviews }) => {
                     <div className="Profile flex items-center gap-4 rtl:flex-row-reverse">
                       <div className="relative size-20 min-w-[80px] overflow-hidden rounded-full bg-[#C4C4C4] md:size-32 md:min-w-[128px]">
                         <Image
-                          src={`/schoolstaff/Akhlasi.png`}
-                          alt="student"
+                          src={`/reviews/${item?.image_url}`}
+                          alt={item.name_en}
                           quality={100}
                           fill
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

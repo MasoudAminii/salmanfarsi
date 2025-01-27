@@ -20,7 +20,10 @@ const page = async () => {
         />
       </section>
       <section className="Curriculum">
-        <div className="Our-Curriculum px-4 py-14 md:px-8 md:py-20 lg:px-20">
+        <div
+          id="ehsan"
+          className="Our-Curriculum px-4 py-14 md:px-8 md:py-20 lg:px-20"
+        >
           <div className="Curriculum-Container mx-auto max-w-screen-2xl">
             <div className="Content flex gap-8 max-md:flex-col lg:gap-20">
               <div className="Image relative min-h-[300px] flex-1 overflow-hidden rounded-[30px] md:min-h-[500px]">
@@ -73,7 +76,10 @@ const page = async () => {
             </div>
           </div>
         </div>
-        <div className="Principal-Welcome bg-[#F9F9F9] px-4 py-14 md:px-8 md:py-20 lg:px-20">
+        <div
+          id="elementary school"
+          className="Principal-Welcome bg-[#F9F9F9] px-4 py-14 md:px-8 md:py-20 lg:px-20"
+        >
           <div className="PrincipalContainer mx-auto max-w-screen-2xl">
             <div className="Peinscipal-Wrapper flex gap-8 max-md:flex-col lg:gap-20">
               <div className="Content-1 flex flex-1 flex-col gap-4 md:gap-14 md:pt-14">
@@ -119,7 +125,10 @@ const page = async () => {
             </div>
           </div>
         </div>
-        <div className="OurView-Welcome bg-[#F9F9F9] px-4 py-14 md:px-8 md:py-20 lg:px-20">
+        <div
+          id="middle school"
+          className="OurView-Welcome bg-[#F9F9F9] px-4 py-14 md:px-8 md:py-20 lg:px-20"
+        >
           <div className="OurView-Container mx-auto max-w-screen-2xl">
             <div className="OurView-Wrapper flex gap-8 max-md:flex-col-reverse lg:gap-20">
               <div className="Text flex flex-1 flex-col gap-5 md:py-8">
@@ -154,7 +163,10 @@ const page = async () => {
             </div>
           </div>
         </div>
-        <div className="Our-Curriculum px-4 py-14 md:px-8 md:py-20 lg:px-20">
+        <div
+          id="highschool"
+          className="Our-Curriculum px-4 py-14 md:px-8 md:py-20 lg:px-20"
+        >
           <div className="Curriculum-Container mx-auto max-w-screen-2xl">
             <div className="Content flex gap-8 max-md:flex-col lg:gap-20">
               <div className="Image relative min-h-[300px] flex-auto overflow-hidden rounded-[30px] md:w-1/3">
