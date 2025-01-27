@@ -26,31 +26,39 @@ export async function generateMetadata({ params }) {
     };
   }
 
+  const baseUrl = "https://armanegar.site"; // Replace with your production URL
+
   return {
     title: blogData?.title_en,
     description: blogData?.content1_en || "this is a blog",
     openGraph: {
       title: blogData?.title_en,
       description: blogData?.content1_en,
-      url: "armanegar.site/school-news/",
+      url: `${baseUrl}/school-news/${params.slug}`, // Full page URL
       images: {
-        url: `/photo_main_post/${blogData.main_image}`,
+        url: blogData.main_image
+          ? `${baseUrl}/photo_main_post/${blogData.main_image}`
+          : `${baseUrl}/link-logo.jpeg`, // Fallback image
         width: 1200,
         height: 630,
-        alt: `${blogData?.title_en} image`,
+        alt: `${blogData?.title_en || "Default"} image`,
       },
     },
   };
 }
 
-// export async function generateStaticParams() {
-//   const posts = await prisma.post.findMany({
-//     select: { id: true },
-//   });
-//   return posts.map((post) => ({
-//     slug: post.id, // Convert ID to string for URL
-//   }));
-// }
+export async function generateStaticParams() {
+  try {
+    const posts = await prisma.post.findMany({
+      select: { id: true },
+    });
+    return posts.map((post) => ({ slug: post.id }));
+  } catch (error) {
+    console.error("Error fetching static params:", error);
+    return [];
+  }
+}
+export const revalidate = 60;
 
 const page = async ({ params }) => {
   const [blog, topPosts] = await Promise.all([
