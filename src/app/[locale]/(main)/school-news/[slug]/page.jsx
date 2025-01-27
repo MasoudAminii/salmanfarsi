@@ -44,17 +44,12 @@ import { getTranslations } from "next-intl/server";
 // }
 
 export async function generateStaticParams() {
-  try {
-    const posts = await prisma.post.findMany({
-      select: { id: true },
-    });
-    return posts.map((post) => ({
-      slug: post.id.toString(), // Convert ID to string for URL
-    }));
-  } catch (error) {
-    console.error("Error in generateStaticParams:", error);
-    return [];
-  }
+  const posts = await prisma.post.findMany({
+    select: { id: true },
+  });
+  return posts.map((post) => ({
+    slug: post.id, // Convert ID to string for URL
+  }));
 }
 
 const page = async ({ params }) => {
