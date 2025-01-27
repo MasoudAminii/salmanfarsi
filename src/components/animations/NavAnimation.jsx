@@ -27,6 +27,8 @@ import {
 import Language from "@/components/buttons/Language";
 import Logo from "../../../public/logo/logo-header.png";
 import NoBgLogo from "../../../public/logo/logo-header-white.png";
+import LogoFrasi from "../../../public/logo/farsi-logo.png";
+import FarsiNoBgLogo from "../../../public/logo/farsi-logo-bg.png";
 
 // Framer motion for animations
 import {
@@ -47,8 +49,13 @@ const NavAnimation = () => {
     { title: t("home"), href: "/", icon: <HiHome size={iconSize} /> },
     {
       dropTitle: t("about"),
-      href: "/about-us",
+      href: "#",
       drop: [
+        {
+          label: t("about_us"),
+          href: "/about-us",
+          icon: <FaSchool size={iconSize} />,
+        },
         {
           label: t("schoolStaff"),
           href: "/about-us/school-staff",
@@ -83,15 +90,9 @@ const NavAnimation = () => {
       ],
     },
     {
-      dropTitle: t("media"),
-      href: "#",
-      drop: [
-        {
-          label: t("blogs"),
-          href: "/school-news",
-          icon: <GiNewspaper size={iconSize} />,
-        },
-      ],
+      title: t("blogs"),
+      href: "/school-news",
+      icon: <GiNewspaper size={iconSize} />,
     },
     {
       title: t("contactUs"),
@@ -128,15 +129,16 @@ const NavAnimation = () => {
   const isHomePage =
     pathName === `/${locale}` ||
     pathName === `/${locale}/admission` ||
+    pathName === `/${locale}/about-us/curriculum/ehsan` ||
     pathName.startsWith(`/${locale}/school-news/`);
 
   const bgColor =
     pathName === `/${locale}/admission` ||
+    pathName === `/${locale}/about-us/curriculum/ehsan` ||
     pathName.startsWith(`/${locale}/school-news/`);
   return (
     <>
       <nav
-        dir="ltr"
         className={`fixed top-0 z-50 w-full transition-transform duration-300 ${
           isHidden ? "-translate-y-full" : "translate-y-0"
         }`}
@@ -196,16 +198,30 @@ const NavAnimation = () => {
           <div className="bottom-nav px-4 py-4 sm:px-8">
             <div className="menu-container flex items-center justify-center gap-4 xxs:justify-between sm:gap-8">
               <div className="logo relative max-xxs:hidden">
-                <Image
-                  src={!isHomePage && !hasScrolled ? NoBgLogo : Logo}
-                  alt="Logo"
-                  width={260}
-                  quality={100}
-                  priority
-                />
+                <Link href={"/"}>
+                  {locale == "en" ? (
+                    <Image
+                      src={!isHomePage && !hasScrolled ? NoBgLogo : Logo}
+                      alt="Logo"
+                      width={260}
+                      quality={100}
+                      priority
+                    />
+                  ) : (
+                    <Image
+                      src={
+                        !isHomePage && !hasScrolled ? FarsiNoBgLogo : LogoFrasi
+                      }
+                      alt="Logo"
+                      width={260}
+                      quality={100}
+                      priority
+                    />
+                  )}
+                </Link>
               </div>
               <div className="menu flex min-w-fit items-center gap-6 max-md:hidden">
-                <div className="links flex gap-4 capitalize rtl:flex-row-reverse">
+                <div className="links flex gap-4 capitalize">
                   {navLinks.map((link, index) => {
                     const isActive =
                       pathName === link.href ||
@@ -369,7 +385,7 @@ const pricingContent = ({ drop, pathName, isHomePage, hasScrolled }) => {
           return (
             <li
               key={dropIndex}
-              className={`group relative p-1 transition-all duration-300 ease-in-out rtl:text-end ${
+              className={`group relative p-1 transition-all duration-300 ease-in-out ${
                 isActive
                   ? "ltr:translate-x-3 rtl:-translate-x-3"
                   : "ltr:hover:translate-x-3 rtl:hover:-translate-x-3"
@@ -396,7 +412,7 @@ const MobileMenu = ({ isHomePage, hasScrolled }) => {
     { title: t("home"), href: "/", icon: <HiHome size={iconSize} /> },
     {
       dropTitle: t("about"),
-      href: "/about-us",
+      href: "#",
       drop: [
         {
           label: t("about_us"),
@@ -416,7 +432,7 @@ const MobileMenu = ({ isHomePage, hasScrolled }) => {
         {
           label: t("facilities"),
           href: "/about-us/facilities",
-          icon: <GiSchoolBag size={iconSize} />,
+          icon: <GiBookshelf size={iconSize} />,
         },
       ],
     },
@@ -437,15 +453,9 @@ const MobileMenu = ({ isHomePage, hasScrolled }) => {
       ],
     },
     {
-      dropTitle: t("media"),
-      href: "#",
-      drop: [
-        {
-          label: t("blogs"),
-          href: "/school-news",
-          icon: <GiNewspaper size={iconSize} />,
-        },
-      ],
+      title: t("blogs"),
+      href: "/school-news",
+      icon: <GiNewspaper size={iconSize} />,
     },
     {
       title: t("contactUs"),

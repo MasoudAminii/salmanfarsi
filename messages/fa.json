@@ -1,17 +1,15 @@
 {
   "Header": {
-    "home": "خانه",
-    "about": "درباره",
+    "home": "صفحه اصلی",
+    "about": "آشنایی با مدرسه",
     "about_us": "درباره ما",
-    "schoolStaff": "پرسنل مدرسه",
-    "curriculum": "برنامه درسی",
+    "schoolStaff": "کادر آموزشی",
+    "curriculum": "برنامه آموزشی",
     "facilities": "امکانات",
-    "admission": "پذیرش",
-    "termsConditions": "قوانین و شرایط",
-    "fees": "هزینه‌ها",
-    "media": "رسانه",
-    "blogs": "اخبار مدرسه",
-    "imageGallery": "گالری تصاویر",
+    "admission": "راهنما",
+    "termsConditions": "شرایط ثبت‌ نام",
+    "faq": "سوالات متداول",
+    "blogs": "اخبار و رویدادها",
     "contactUs": "تماس با ما"
   },
   "Footer": {
@@ -252,7 +250,7 @@
   "ShoolStaffPage": {
     "banner": {
       "title": "درباره ما",
-      "description": "کارکنان مدرسه"
+      "description": "کادر آموزشی"
     },
     "main": {
       "heading": "تیم متخصص ما",
@@ -292,7 +290,7 @@
   "CurriculumPage": {
     "banner": {
       "title": "خانه",
-      "description": "برنامه درسی"
+      "description": "برنامه آموزشی"
     },
     "curriculum": {
       "ehsan": {
@@ -389,7 +387,7 @@
   "TermsAndConditionPage": {
     "banner": {
       "title": "خانه",
-      "description": "شرایط و ضوابط ثبت‌نام"
+      "description": "شرایط ثبت‌ نام"
     },
     "terms": {
       "admission_criteria": "دستورالعمل‌های ثبت‌نام مدرسه سلمان فارسی",

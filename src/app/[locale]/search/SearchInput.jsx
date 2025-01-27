@@ -49,7 +49,7 @@ const SearchInput = () => {
         </div>
         <div className="Title">
           <h4 className="text-2xl font-semibold uppercase text-white sm:text-3xl">
-            {t("heading")}
+            {t("heding")}
           </h4>
         </div>
         <div className="Search w-full">

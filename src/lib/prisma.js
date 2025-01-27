@@ -101,6 +101,7 @@ export async function getQuery(query) {
         ],
       },
       select: {
+        id: true,
         slug: true,
         title_en: true,
         title: true,

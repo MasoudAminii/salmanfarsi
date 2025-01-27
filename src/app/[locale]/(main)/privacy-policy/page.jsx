@@ -21,8 +21,8 @@ const page = async () => {
       </section>
       <section className="Privacy-Policy">
         <div className="Privacy-Policy-Container px-4 py-14 md:px-8 md:py-20">
-          <div className="Privacy-Policy-Wrapper mx-auto max-w-screen-2xl">
-            <div className="Title mb-8 lg:w-2/3">
+          <div className="Privacy-Policy-Wrapper mx-auto max-w-screen-lg">
+            <div className="Title mb-8">
               <h2 className="mb-4 text-4xl font-bold capitalize leading-snug text-[#242331] max-sm:text-center sm:text-5xl">
                 {privacy("privacy_policy.privacy_policy_title")}
               </h2>

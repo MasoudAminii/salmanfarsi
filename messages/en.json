@@ -3,16 +3,13 @@
     "home": "Home",
     "about": "About",
     "about_us": "About us",
-    "schoolStaff": "School Staff",
-    "curriculum": "Curriculum",
-    "facilities": "facilities",
-    "admission": "Admission",
-    "termsConditions": "Terms & Conditions",
-    "faq": "FAQ",
-    "fees": "Fees",
-    "media": "Media",
-    "blogs": "school news",
-    "imageGallery": "Image Gallery",
+    "schoolStaff": "Educational Team",
+    "curriculum": "Academic Curriculum",
+    "facilities": "School Facilities",
+    "admission": "Registration",
+    "termsConditions": "Registration Policies",
+    "faq": "Common Questions",
+    "blogs": "News",
     "contactUs": "Contact Us"
   },
   "Footer": {
@@ -253,7 +250,7 @@
   "ShoolStaffPage": {
     "banner": {
       "title": "About Us",
-      "description": "School Staff"
+      "description": "Educational Team"
     },
     "main": {
       "heading": "our expert team",
@@ -293,7 +290,7 @@
   "CurriculumPage": {
     "banner": {
       "title": "Home",
-      "description": "Curriculum"
+      "description": "Academic Curriculum"
     },
     "curriculum": {
       "ehsan": {
@@ -390,7 +387,7 @@
   "TermsAndConditionPage": {
     "banner": {
       "title": "Home",
-      "description": "Registration Terms"
+      "description": "Registration Policies"
     },
     "terms": {
       "admission_criteria": "Salman Farsi School Registration Instructions",
@@ -584,7 +581,7 @@
   "FacilitiesPage": {
     "banner": {
       "title": "Home",
-      "description": "Facilities"
+      "description": "School Facilities"
     },
     "facilities": {
       "main": {

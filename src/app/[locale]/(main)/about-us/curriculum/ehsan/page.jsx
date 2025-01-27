@@ -13,31 +13,24 @@ const page = async () => {
   const ehsan = await getTranslations("Curriculum_Detail");
   return (
     <div>
-      <section className="Banner">
-        <TextParallax
-          subheading={ehsan("ehsan.banner.banner_title")}
-          imgUrl={`/banner/banner (10).jpg`}
-          heading={ehsan("ehsan.banner.banner_subtitle")}
-        />
-      </section>
-      <section className="about">
+      <section className="about mt-24">
         <div className="about-container px-4 py-14 md:px-8 md:py-20">
           <div className="about-wrapper mx-auto max-w-screen-lg">
-            <div className="main-Image">
-              <div className="image relative h-[450px] overflow-hidden rounded-2xl bg-gray-400">
-                <Image
-                  src={`/photo_main_post/eid-fitr.png`}
-                  alt={`Image`}
-                  fill
-                  sizes="100vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-            <div className="content py-8">
+            <div className="content pb-8">
               <h4 className="mb-4 text-3xl font-bold leading-snug md:text-4xl">
                 {ehsan("ehsan.main.introduction_title")}
               </h4>
+              <div className="main-Image mb-4">
+                <div className="image relative h-[450px] overflow-hidden rounded-2xl bg-gray-400">
+                  <Image
+                    src={`/students/ehsan-1.jpeg`}
+                    alt={`ehsan`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
               <p className="mb-4 text-justify font-light md:text-xl">
                 {ehsan("ehsan.main.introduction_description_1")}
               </p>
@@ -74,7 +67,7 @@ const page = async () => {
             <div className="second-image flex gap-4 max-sm:flex-col">
               <div className="page-image relative h-full max-h-[370px] min-h-[250px] w-full overflow-hidden rounded-xl sm:min-h-[370px]">
                 <Image
-                  src={`/photo_main_post/fajr-decade.png`}
+                  src={`/students/ehsan.jpg`}
                   alt="image"
                   fill
                   sizes="(max-width: 640px) 100vw, 640px"
@@ -84,7 +77,7 @@ const page = async () => {
               </div>
               <div className="page-image relative h-full max-h-[370px] min-h-[250px] w-full overflow-hidden rounded-xl sm:min-h-[370px]">
                 <Image
-                  src={`/photo_main_post/fajr-decade.png`}
+                  src={`/students/ehsan-2.jpeg`}
                   alt="image"
                   fill
                   sizes="(max-width: 640px) 100vw, 640px"
