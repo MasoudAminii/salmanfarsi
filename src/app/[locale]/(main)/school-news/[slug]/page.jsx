@@ -16,41 +16,41 @@ import { FaArrowRight } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 import { getTranslations } from "next-intl/server";
 
-// export async function generateMetadata({ params }) {
-//   const blogData = await getBlog(params.slug);
+export async function generateMetadata({ params }) {
+  const blogData = await getBlog(params.slug);
 
-//   if (!blogData) {
-//     return {
-//       title: "404 - Page Not Found",
-//       description: "The page you are looking for does not exist.",
-//     };
-//   }
+  if (!blogData) {
+    return {
+      title: "404 - Page Not Found",
+      description: "The page you are looking for does not exist.",
+    };
+  }
 
-//   return {
-//     title: blogData?.title_en,
-//     description: blogData?.content1_en || "this is a blog",
-//     openGraph: {
-//       title: blogData?.title_en,
-//       description: blogData?.content1_en,
-//       url: "armanegar.site",
-//       images: {
-//         url: `/photo_main_post/${blogData.main_image}`,
-//         width: 1200,
-//         height: 630,
-//         alt: `${blogData?.title_en} image`,
-//       },
-//     },
-//   };
-// }
-
-export async function generateStaticParams() {
-  const posts = await prisma.post.findMany({
-    select: { id: true },
-  });
-  return posts.map((post) => ({
-    slug: post.id, // Convert ID to string for URL
-  }));
+  return {
+    title: blogData?.title_en,
+    description: blogData?.content1_en || "this is a blog",
+    openGraph: {
+      title: blogData?.title_en,
+      description: blogData?.content1_en,
+      url: "armanegar.site",
+      images: {
+        url: `/photo_main_post/${blogData.main_image}`,
+        width: 1200,
+        height: 630,
+        alt: `${blogData?.title_en} image`,
+      },
+    },
+  };
 }
+
+// export async function generateStaticParams() {
+//   const posts = await prisma.post.findMany({
+//     select: { id: true },
+//   });
+//   return posts.map((post) => ({
+//     slug: post.id, // Convert ID to string for URL
+//   }));
+// }
 
 const page = async ({ params }) => {
   const [blog, topPosts] = await Promise.all([
