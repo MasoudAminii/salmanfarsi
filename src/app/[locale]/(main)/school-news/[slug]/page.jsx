@@ -38,7 +38,7 @@ export async function generateMetadata({ params }) {
       images: {
         url: blogData.main_image
           ? `${baseUrl}/photo_main_post/${blogData.main_image}`
-          : `${baseUrl}/link-logo.jpeg`, // Fallback image
+          : `/logo/link-logo.jpeg`, // Fallback image
         width: 1200,
         height: 630,
         alt: `${blogData?.title_en || "Default"} image`,
