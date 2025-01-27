@@ -32,7 +32,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: blogData?.title_en,
       description: blogData?.content1_en,
-      url: "armanegar.site",
+      url: "armanegar.site/school-news/",
       images: {
         url: `/photo_main_post/${blogData.main_image}`,
         width: 1200,
