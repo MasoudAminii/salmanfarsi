@@ -43,39 +43,32 @@ import { getTranslations } from "next-intl/server";
 //   };
 // }
 
-// export async function generateStaticParams() {
-//   try {
-//     const posts = await prisma.post.findMany({
-//       select: { id: true },
-//       orderBy: { publish_date: "desc" },
-//       // Remove take: 6 for testing
-//     });
-//     return posts.map((post) => ({ id: post.slug }));
-//   } catch (error) {
-//     console.error("Error in generateStaticParams:", error);
-//     return [];
-//   }
-// }
+export async function generateStaticParams() {
+  try {
+    const posts = await prisma.post.findMany({
+      select: { id: true },
+    });
+    return posts.map((post) => ({ id: post.id }));
+  } catch (error) {
+    console.error("Error in generateStaticParams:", error);
+    return [];
+  }
+}
 
 const page = async ({ params }) => {
-  const t = await getTranslations("SchoolNewsDetailPage");
-  const locale = params.locale || "en";
-  if (!params.id) {
-    console.error("Missing slug parameter");
-    notFound();
-  }
-
   const [blog, topPosts] = await Promise.all([
     getBlog(params.slug),
     getTopPosts(),
   ]);
+  const relatedPosts = await getRelatedPosts(blog.category_id, blog.id);
+
+  const t = await getTranslations("SchoolNewsDetailPage");
+  const locale = params.locale || "en";
 
   if (!blog) {
     console.error(`Blog not found for slug: ${params.slug}`);
     notFound();
   }
-
-  const relatedPosts = await getRelatedPosts(blog.category_id, blog.slug);
 
   const formatedDate = new Date(blog.publish_date).toLocaleDateString();
   return (
