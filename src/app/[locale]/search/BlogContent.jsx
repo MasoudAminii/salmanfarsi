@@ -11,7 +11,7 @@ const BlogContent = ({ blogs }) => {
           key={blog.id}
           className="item group transition-all hover:scale-105"
         >
-          <Link href={`/school-news/${blog.slug}`}>
+          <Link href={`/school-news/${blog.id}`}>
             <div className="Image shine relative h-[260px] overflow-hidden rounded-lg bg-[#303030] group-hover:shadow-inner max-sm:h-[60vw] sm:h-[270px]">
               <Image
                 src={`/photo_main_post/${blog.main_image}`}

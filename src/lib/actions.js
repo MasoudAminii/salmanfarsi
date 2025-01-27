@@ -2,10 +2,9 @@
 import prisma from "@/lib/db";
 
 export async function incrementViewCount(blogSlug) {
-  const decodedSlug = decodeURIComponent(blogSlug);
   try {
     await prisma.post.update({
-      where: { slug: decodedSlug },
+      where: { id: blogSlug }, // Use the ID directly
       data: { views: { increment: 1 } },
     });
     return { success: true };
@@ -14,6 +13,7 @@ export async function incrementViewCount(blogSlug) {
     return { success: false, error: "Failed to update view count" };
   }
 }
+
 export async function getBlog(page, query) {
   try {
     let whereCondition = {};

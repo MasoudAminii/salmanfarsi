@@ -8,6 +8,7 @@ import {
   HiLocationMarker,
 } from "react-icons/hi";
 import { getTranslations } from "next-intl/server";
+import ContactVideo from "@/components/buttons/ContactVideo";
 
 export const metadata = {
   title: "Conatct Us",
@@ -28,11 +29,16 @@ const page = async () => {
         <div className="Contact-Container mx-auto max-w-screen-2xl">
           <div className="Contact-Wrapper flex items-center justify-center gap-2 gap-y-4 max-lg:flex-col">
             <div className="Contact-Image relative z-10 flex max-w-[600px] flex-auto flex-col items-center justify-center">
-              <div className="z-10">
-                <Image src={ImageContact} alt="ImageContact" width={450} />
+              <div className="image z-10 mb-6">
+                <Image
+                  src={ImageContact}
+                  alt="ImageContact"
+                  width={450}
+                  quality={100}
+                />
               </div>
-              <div className="z-10 max-lg:hidden">
-                <Image src={ImageContact} alt="ImageContact" width={450} />
+              <div className="video z-10 max-lg:hidden">
+                <ContactVideo />
               </div>
             </div>
             <div className="Contact-Text max-w-[600px] flex-auto p-2">

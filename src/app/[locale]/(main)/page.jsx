@@ -10,6 +10,7 @@ import prisma from "@/lib/db";
 import Image from "next/image";
 import BlogContent from "@/components/card/BlogContent";
 // Icons
+import { TiTick } from "react-icons/ti";
 import { FaArrowRight } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
 //  carousel images
@@ -179,21 +180,21 @@ const HomeAbout = async () => {
                 </div>
                 <div className="list">
                   <ul className="flex flex-wrap gap-4">
-                    <li>
-                      <span className="rounded-full bg-[#635AD9] px-2 text-white ltr:mr-1 rtl:ml-1">
-                        &#10004;
+                    <li className="flex items-start gap-2 text-justify">
+                      <span className="rounded-full bg-[var(--secondary-color)] p-1 text-white">
+                        <TiTick size={20} />
                       </span>
                       {t("experience.experience-1")}
                     </li>
-                    <li>
-                      <span className="rounded-full bg-[#635AD9] px-2 text-white ltr:mr-1 rtl:ml-1">
-                        &#10004;
+                    <li className="flex items-start gap-2 text-justify">
+                      <span className="rounded-full bg-[var(--secondary-color)] p-1 text-white">
+                        <TiTick size={20} />
                       </span>
                       {t("experience.experience-2")}
                     </li>
-                    <li>
-                      <span className="rounded-full bg-[#635AD9] px-2 text-white ltr:mr-1 rtl:ml-1">
-                        &#10004;
+                    <li className="flex items-start gap-2 text-justify">
+                      <span className="rounded-full bg-[var(--secondary-color)] p-1 text-white">
+                        <TiTick size={20} />
                       </span>
                       {t("experience.experience-3")}
                     </li>

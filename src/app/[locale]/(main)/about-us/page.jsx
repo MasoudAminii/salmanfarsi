@@ -96,7 +96,9 @@ const page = async () => {
             <div className="flex flex-col gap-4 text-lg leading-relaxed sm:gap-6 sm:text-xl">
               {aboutUsText.map((item, index) => (
                 <div key={index} className="about-card">
-                  <h4 className="heading-2 mb-4 leading-snug">{item.title}</h4>
+                  <h4 className="paraghraph-1 mb-2 text-[#333333]">
+                    {item.title}
+                  </h4>
                   <p className="paraghraph-1 text-justify text-[#333333]">
                     {item.content}
                   </p>

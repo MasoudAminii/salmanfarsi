@@ -16,7 +16,13 @@ import {
 } from "react-icons/hi";
 import { MdContactEmergency } from "react-icons/md";
 // Animation Link
-import { FaFacebookF, FaInstagram, FaSearch, FaYoutube } from "react-icons/fa";
+import {
+  FaWhatsapp,
+  FaInstagram,
+  FaSearch,
+  FaYoutube,
+  FaQuestion,
+} from "react-icons/fa";
 // import toggles
 import Language from "@/components/buttons/Language";
 import Logo from "../../../public/logo/logo-header.png";
@@ -68,6 +74,11 @@ const NavAnimation = () => {
           label: t("termsConditions"),
           href: "/terms-and-conditions",
           icon: <BsShieldShaded size={iconSize} />,
+        },
+        {
+          label: t("faq"),
+          href: "/faq",
+          icon: <FaQuestion size={iconSize} />,
         },
       ],
     },
@@ -159,10 +170,11 @@ const NavAnimation = () => {
               </div>
               <div className="social mr-4 flex items-center gap-4 text-xl text-[#635AD9] max-sm:hidden">
                 <a
-                  href=""
+                  href="https://api.whatsapp.com/send?phone=97142988116"
                   className="transition-all duration-300 hover:text-white"
+                  target="_blank"
                 >
-                  <FaFacebookF />
+                  <FaWhatsapp />
                 </a>
                 <a
                   className="transition-all duration-300 hover:text-white"
@@ -412,6 +424,11 @@ const MobileMenu = ({ isHomePage, hasScrolled }) => {
           href: "/terms-and-conditions",
           icon: <BsShieldShaded size={iconSize} />,
         },
+        {
+          label: t("faq"),
+          href: "/faq",
+          icon: <FaQuestion size={iconSize} />,
+        },
       ],
     },
     {
@@ -585,7 +602,7 @@ const MobileMenu = ({ isHomePage, hasScrolled }) => {
                       className="flex w-fit items-center gap-2 hover:underline"
                     >
                       <span className="rounded-full bg-[var(--secondary-color)] p-3 text-xl text-white">
-                        <FaFacebookF size={20} />
+                        <FaWhatsapp size={20} />
                       </span>
                     </a>
                     <a

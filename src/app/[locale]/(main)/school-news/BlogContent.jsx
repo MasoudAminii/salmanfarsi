@@ -17,15 +17,17 @@ const BlogContent = ({ blogs }) => {
             key={blog.id}
             className="Blog-Item flex flex-col rounded-2xl shadow-md"
           >
-            <div className="image relative h-[227px] overflow-hidden rounded-t-2xl bg-gray-400">
-              <Image
-                src={`/photo_main_post/${blog.main_image}`}
-                alt={`${blog.title_en} Image`}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-cover"
-              />
-            </div>
+            <Link href={`/school-news/${blog.id}`}>
+              <div className="image relative h-[227px] overflow-hidden rounded-t-2xl bg-gray-400">
+                <Image
+                  src={`/photo_main_post/${blog.main_image}`}
+                  alt={`${blog.title_en} Image`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover"
+                />
+              </div>
+            </Link>
             <div className="content flex flex-1 flex-col justify-between gap-4 p-4">
               <div className="text flex flex-col justify-between gap-4">
                 <div className="category flex flex-wrap items-center gap-4">
@@ -38,16 +40,18 @@ const BlogContent = ({ blogs }) => {
                     {formattedDate}
                   </p>
                 </div>
-                <h3 className="Title line-clamp-2 text-xl font-semibold">
-                  {locale == "en" ? blog?.title_en : blog?.title}
-                </h3>
+                <Link href={`/school-news/${blog.id}`}>
+                  <h3 className="Title line-clamp-2 text-xl font-semibold">
+                    {locale == "en" ? blog?.title_en : blog?.title}
+                  </h3>
+                </Link>
               </div>
               <div className="bottom-blog flex flex-col">
                 <span className="my-4 h-[1px] w-full rounded-full bg-[#EAF3F8]" />
                 <div className="admin-content flex flex-wrap items-center justify-between gap-4">
                   <div className="admin flex w-fit items-center gap-2"></div>
                   <Link
-                    href={`/school-news/${blog.slug}`}
+                    href={`/school-news/${blog.id}`}
                     className="w-fit rounded-[4px] bg-[#F3F7FB] p-3 text-[#635AD9] transition-all hover:bg-[#635AD9] hover:text-[#F3F7FB] rtl:scale-x-[-1]"
                   >
                     <FaArrowRight />

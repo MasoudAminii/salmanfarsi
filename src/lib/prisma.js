@@ -2,16 +2,14 @@ import prisma from "@/lib/db";
 import { unstable_noStore as noStore } from "next/cache";
 export async function getBlog(slug) {
   try {
-    // Handle both encoded and decoded slugs
-    const decodedSlug = decodeURIComponent(slug);
-    return prisma.post.findFirst({
+    return prisma.post.findUnique({
       where: {
-        OR: [{ slug: decodedSlug }, { slug: slug }],
+        id: slug, // Fetch the post by its ID
       },
-      include: { categories: true },
+      include: { categories: true }, // Include related categories if needed
     });
   } catch (err) {
-    console.error("Error fetching blog:", err);
+    console.error("Error fetching blog by ID:", err);
     return null;
   }
 }
@@ -21,9 +19,10 @@ export async function getRelatedPosts(categoryId, excludeSlug) {
     return prisma.post.findMany({
       where: {
         category_id: categoryId,
-        slug: { not: excludeSlug }, // Exclude current post
+        id: { not: excludeSlug }, // Exclude current post
       },
       select: {
+        id: true,
         slug: true,
         title_en: true,
         title: true,
@@ -51,6 +50,7 @@ export async function getTopPosts() {
       orderBy: { views: "desc" },
       take: 4,
       select: {
+        id: true,
         slug: true,
         title_en: true,
         title: true,

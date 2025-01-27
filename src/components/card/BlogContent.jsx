@@ -20,7 +20,7 @@ const BlogContent = ({ blogs }) => {
                   : ""
             } min-h-[250px]`}
           >
-            <Link href={`/school-news/${blog.slug}`}>
+            <Link href={`/school-news/${blog.id}`}>
               <div className="image relative h-full w-full transition-all duration-400 group-hover:scale-105">
                 <Image
                   src={`/photo_main_post/${blog.main_image}`}
@@ -38,9 +38,11 @@ const BlogContent = ({ blogs }) => {
                   ? blog?.categories?.category_name_en
                   : blog?.categories?.category_name}
               </p>
-              <h3 className="title line-clamp-2 text-base font-semibold text-white md:text-lg">
-                {locale == "en" ? blog?.title_en : blog?.title}
-              </h3>
+              <Link href={`/school-news/${blog.id}`}>
+                <h3 className="title line-clamp-2 text-base font-semibold text-white md:text-lg">
+                  {locale == "en" ? blog?.title_en : blog?.title}
+                </h3>
+              </Link>
               <p className="date text-sm uppercase text-gray-300">
                 {formattedDate}
               </p>

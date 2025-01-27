@@ -29,17 +29,28 @@ export async function generateMetadata({ params }) {
   return {
     title: blogData?.title_en,
     description: blogData?.content1_en || "this is a blog",
+    openGraph: {
+      title: blogData?.title_en,
+      description: blogData?.content1_en,
+      url: "armanegar.site",
+      images: {
+        url: `/photo_main_post/${blogData.main_image}`,
+        width: 1200,
+        height: 630,
+        alt: `${blogData?.title_en} image`,
+      },
+    },
   };
 }
 
 export async function generateStaticParams() {
   try {
     const posts = await prisma.post.findMany({
-      select: { slug: true },
+      select: { id: true },
       orderBy: { publish_date: "desc" },
       // Remove take: 6 for testing
     });
-    return posts.map((post) => ({ slug: post.slug }));
+    return posts.map((post) => ({ id: post.slug }));
   } catch (error) {
     console.error("Error in generateStaticParams:", error);
     return [];
@@ -213,7 +224,7 @@ const page = async ({ params }) => {
                                   {RelatedDate}
                                 </p>
                               </div>
-                              <Link href={`/school-news/${related?.slug}`}>
+                              <Link href={`/school-news/${related?.id}`}>
                                 <h3 className="Title line-clamp-3 text-xl font-semibold">
                                   {locale == "en"
                                     ? related?.title_en
@@ -226,7 +237,7 @@ const page = async ({ params }) => {
                               <div className="admin-content flex flex-wrap items-center justify-between gap-4">
                                 <div className="admin flex w-fit items-center gap-2"></div>
                                 <Link
-                                  href={`/school-news/${blog?.slug}`}
+                                  href={`/school-news/${blog?.id}`}
                                   className="w-fit rounded-[4px] bg-[#F3F7FB] p-3 text-[#635AD9] transition-all hover:bg-[#635AD9] hover:text-[#F3F7FB] rtl:scale-x-[-1]"
                                 >
                                   <FaArrowRight />
@@ -272,7 +283,7 @@ const page = async ({ params }) => {
                               "Uncategorized"}{" "}
                           . {new Date(post?.publish_date).toLocaleDateString()}
                         </p>
-                        <Link href={`/school-news/${post.slug}`}>
+                        <Link href={`/school-news/${post.id}`}>
                           <h5 className="line-clamp-2 text-lg font-semibold text-[var(--primary-color)] hover:underline">
                             {locale == "en" ? post?.title_en : post?.title}
                           </h5>

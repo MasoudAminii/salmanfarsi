@@ -12,6 +12,18 @@ export const metadata = {
   },
   description:
     "The Iranian Salman Farsi School in Dubai offers comprehensive education following the Iranian national curriculum, fostering academic excellence and cultural values for Iranian students abroad. The school emphasizes bilingual instruction, integrating both Persian and Arabic languages to prepare students for diverse opportunities.",
+  openGraph: {
+    title: "Iranian Salman Farsi School",
+    description:
+      "The Iranian Salman Farsi School in Dubai offers comprehensive education following the Iranian national curriculum, fostering academic excellence and cultural values for Iranian students abroad. The school emphasizes bilingual instruction, integrating both Persian and Arabic languages to prepare students for diverse opportunities.",
+    url: "armanegar.site",
+    images:{
+      url: "/logo/link-logo.jpeg",
+      width: 1200,
+      height: 630,
+      alt: "Iranian Salman Farsi School Logo",
+    }
+  },
 };
 
 export default async function LocaleLayout({

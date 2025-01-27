@@ -1,6 +1,6 @@
 import { PiTelegramLogo } from "react-icons/pi";
 import {
-  FaFacebookF,
+  FaWhatsapp,
   FaInstagram,
   FaYoutube,
   FaAngleDoubleRight,
@@ -42,19 +42,19 @@ const Footer = async () => {
   const curriculum = [
     {
       title: footer("main.curriculum_links.elemantryschool"),
-      href: "/curriculum",
+      href: "/about-us/curriculum",
     },
     {
       title: footer("main.curriculum_links.middleschool"),
-      href: "/curriculum",
+      href: "/about-us/curriculum",
     },
     {
       title: footer("main.curriculum_links.highschool"),
-      href: "/curriculum",
+      href: "/about-us/curriculum",
     },
     {
       title: footer("main.curriculum_links.ehsan"),
-      href: "/curriculum",
+      href: "/about-us/curriculum",
     },
   ];
 
@@ -218,10 +218,11 @@ const Newsletter = ({ footer }) => {
       <div className="footer-social w-1/4 flex-auto max-md:hidden">
         <div className="social flex items-center justify-end gap-4 p-2 text-2xl text-white">
           <a
-            href=""
+            href="https://api.whatsapp.com/send?phone=97142988116"
             className="rounded-full border border-white/50 bg-transparent p-2 transition-all duration-300 hover:border-[var(--primary-color)] hover:text-[var(--primary-color)]"
+            target="_blank"
           >
-            <FaFacebookF />
+            <FaWhatsapp />
           </a>
           <a
             className="rounded-full border border-white bg-transparent p-2 transition-all duration-300 hover:border-[var(--primary-color)] hover:text-[var(--primary-color)]"
