@@ -16,51 +16,51 @@ import { FaArrowRight } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 import { getTranslations } from "next-intl/server";
 
-export async function generateMetadata({ params }) {
-  const blogData = await getBlog(params.slug);
+// export async function generateMetadata({ params }) {
+//   const blogData = await getBlog(params.slug);
 
-  if (!blogData) {
-    return {
-      title: "404 - Page Not Found",
-      description: "The page you are looking for does not exist.",
-    };
-  }
+//   if (!blogData) {
+//     return {
+//       title: "404 - Page Not Found",
+//       description: "The page you are looking for does not exist.",
+//     };
+//   }
 
-  return {
-    title: blogData?.title_en,
-    description: blogData?.content1_en || "this is a blog",
-    openGraph: {
-      title: blogData?.title_en,
-      description: blogData?.content1_en,
-      url: "armanegar.site",
-      images: {
-        url: `/photo_main_post/${blogData.main_image}`,
-        width: 1200,
-        height: 630,
-        alt: `${blogData?.title_en} image`,
-      },
-    },
-  };
-}
+//   return {
+//     title: blogData?.title_en,
+//     description: blogData?.content1_en || "this is a blog",
+//     openGraph: {
+//       title: blogData?.title_en,
+//       description: blogData?.content1_en,
+//       url: "armanegar.site",
+//       images: {
+//         url: `/photo_main_post/${blogData.main_image}`,
+//         width: 1200,
+//         height: 630,
+//         alt: `${blogData?.title_en} image`,
+//       },
+//     },
+//   };
+// }
 
-export async function generateStaticParams() {
-  try {
-    const posts = await prisma.post.findMany({
-      select: { id: true },
-      orderBy: { publish_date: "desc" },
-      // Remove take: 6 for testing
-    });
-    return posts.map((post) => ({ id: post.slug }));
-  } catch (error) {
-    console.error("Error in generateStaticParams:", error);
-    return [];
-  }
-}
+// export async function generateStaticParams() {
+//   try {
+//     const posts = await prisma.post.findMany({
+//       select: { id: true },
+//       orderBy: { publish_date: "desc" },
+//       // Remove take: 6 for testing
+//     });
+//     return posts.map((post) => ({ id: post.slug }));
+//   } catch (error) {
+//     console.error("Error in generateStaticParams:", error);
+//     return [];
+//   }
+// }
 
 const page = async ({ params }) => {
   const t = await getTranslations("SchoolNewsDetailPage");
   const locale = params.locale || "en";
-  if (!params.slug) {
+  if (!params.id) {
     console.error("Missing slug parameter");
     notFound();
   }

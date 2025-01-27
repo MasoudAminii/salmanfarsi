@@ -29,6 +29,7 @@ export async function getRelatedPosts(categoryId, excludeSlug) {
         publish_date: true,
         categories: {
           select: {
+            category_id: true,
             category_name_en: true,
             category_name: true,
           },
