@@ -4,8 +4,8 @@ import { useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 // Icons
 import { BsCashCoin, BsImages, BsShieldShaded } from "react-icons/bs";
-import { FaUserTie } from "react-icons/fa";
-import { GiBookshelf, GiNewspaper } from "react-icons/gi";
+import { FaUserTie, FaSchool } from "react-icons/fa";
+import { GiBookshelf, GiNewspaper, GiSchoolBag } from "react-icons/gi";
 import {
   HiHome,
   HiMenuAlt3,
@@ -399,6 +399,11 @@ const MobileMenu = ({ isHomePage, hasScrolled }) => {
       href: "/about-us",
       drop: [
         {
+          label: t("about_us"),
+          href: "/about-us",
+          icon: <FaSchool size={iconSize} />,
+        },
+        {
           label: t("schoolStaff"),
           href: "/about-us/school-staff",
           icon: <FaUserTie size={iconSize} />,
@@ -411,7 +416,7 @@ const MobileMenu = ({ isHomePage, hasScrolled }) => {
         {
           label: t("facilities"),
           href: "/about-us/facilities",
-          icon: <GiBookshelf size={iconSize} />,
+          icon: <GiSchoolBag size={iconSize} />,
         },
       ],
     },
