@@ -43,17 +43,17 @@ import { getTranslations } from "next-intl/server";
 //   };
 // }
 
-export async function generateStaticParams() {
-  try {
-    const posts = await prisma.post.findMany({
-      select: { id: true },
-    });
-    return posts.map((post) => ({ id: post.id }));
-  } catch (error) {
-    console.error("Error in generateStaticParams:", error);
-    return [];
-  }
-}
+// export async function generateStaticParams() {
+//   try {
+//     const posts = await prisma.post.findMany({
+//       select: { id: true },
+//     });
+//     return posts.map((post) => ({ id: post.id }));
+//   } catch (error) {
+//     console.error("Error in generateStaticParams:", error);
+//     return [];
+//   }
+// }
 
 const page = async ({ params }) => {
   const [blog, topPosts] = await Promise.all([
