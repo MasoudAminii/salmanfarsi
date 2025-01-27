@@ -1,4 +1,4 @@
-import ViewCounter from "@/components/actions/ViewCounter";
+// import ViewCounter from "@/components/actions/ViewCounter";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -80,7 +80,7 @@ const page = async ({ params }) => {
   const formatedDate = new Date(blog.publish_date).toLocaleDateString();
   return (
     <div className="NewsPage">
-      <ViewCounter slug={params.slug} />
+      {/* <ViewCounter slug={params.slug} /> */}
       <div className="Blogs mt-24 px-4 py-14 md:px-8 md:py-20">
         <div className="Main-Wrapper mx-auto max-w-screen-2xl">
           <div className="breadcrumb pb-6">
