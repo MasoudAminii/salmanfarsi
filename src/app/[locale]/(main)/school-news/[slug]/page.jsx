@@ -47,18 +47,17 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export async function generateStaticParams() {
-  try {
-    const posts = await prisma.post.findMany({
-      select: { id: true },
-    });
-    return posts.map((post) => ({ slug: post.id }));
-  } catch (error) {
-    console.error("Error fetching static params:", error);
-    return [];
-  }
-}
-export const revalidate = 60;
+// export async function generateStaticParams() {
+//   try {
+//     const posts = await prisma.post.findMany({
+//       select: { id: true },
+//     });
+//     return posts.map((post) => ({ slug: post.id }));
+//   } catch (error) {
+//     console.error("Error fetching static params:", error);
+//     return [];
+//   }
+// }
 
 const page = async ({ params }) => {
   const [blog, topPosts] = await Promise.all([
