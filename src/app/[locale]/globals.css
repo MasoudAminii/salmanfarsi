@@ -69,10 +69,10 @@
 /* body {
   overflow: auto;
 }
-
+*/
 body::-webkit-scrollbar {
   display: none;
-} */
+}
 
 * {
   scroll-behavior: smooth;
@@ -100,7 +100,7 @@ body::-webkit-scrollbar {
 }
 
 .paraghraph-2 {
-  @apply  font-light md:text-lg;
+  @apply font-light md:text-lg;
 }
 
 body {
