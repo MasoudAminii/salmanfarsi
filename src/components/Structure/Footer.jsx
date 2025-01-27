@@ -42,7 +42,7 @@ const Footer = async () => {
   const curriculum = [
     {
       title: footer("main.curriculum_links.elemantryschool"),
-      href: "/about-us/curriculum#elementory school",
+      href: "/about-us/curriculum#elementary school",
     },
     {
       title: footer("main.curriculum_links.middleschool"),

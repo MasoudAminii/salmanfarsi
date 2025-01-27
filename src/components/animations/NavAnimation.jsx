@@ -492,11 +492,17 @@ const MobileMenu = ({ isHomePage, hasScrolled }) => {
                 className="mobile-menu-container fixed left-0 top-0 z-50 flex h-screen w-full max-w-[300px] flex-col justify-between gap-16 overflow-y-auto bg-[var(--primary-color)]"
               >
                 <div className="Menu-Container">
-                  <div className="top flex flex-wrap items-center justify-between p-4">
+                  <div className="top flex items-center justify-between gap-4 p-4">
                     <div className="mobile-logo">
-                      <h1 className="text-3xl font-bold text-white">
-                        Salman Farsi
-                      </h1>
+                      <div className="logo relative max-xxs:hidden">
+                        <Image
+                          src={NoBgLogo}
+                          alt="Logo"
+                          width={240}
+                          quality={100}
+                          priority
+                        />
+                      </div>
                     </div>
                     <div className="close">
                       <button className="relative flex h-11 w-11 items-center justify-center rounded-full bg-white text-[var(--primary-color)] transition-colors hover:bg-[var(--secondary-color)] hover:text-white">

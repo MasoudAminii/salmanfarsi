@@ -221,9 +221,9 @@ const HomeAbout = async () => {
           <div className="About-Wrapper mx-auto max-w-screen-2xl">
             <div className="text relative z-10 flex gap-8 px-4 py-14 max-md:flex-col md:items-center md:px-8">
               <div className="Video-Text flex-1 text-white">
-                <h3 className="mb-4 inline-block bg-gradient-to-r from-[#635AD9] to-[#219BE4] bg-clip-text font-semibold uppercase text-transparent">
+                <h2 className="mb-4 font-semibold uppercase">
                   {t("video-title")}
-                </h3>
+                </h2>
                 <h4 className="text-3xl font-bold capitalize md:text-4xl lg:text-5xl rtl:leading-normal">
                   {t("video-description")}
                 </h4>
