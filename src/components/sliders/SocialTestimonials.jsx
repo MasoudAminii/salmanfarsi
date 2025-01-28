@@ -23,45 +23,6 @@ function useMediaQuery(query) {
   return matches;
 }
 
-const data = [
-  {
-    icon: <FaNetworkWired />,
-    name: "Database Security",
-    description: "Mauris ultrices ligula eget volutpat aliquet nullam",
-    Link: "#",
-  },
-  {
-    icon: <FaNetworkWired />,
-    name: "Database Security",
-    description: "Mauris ultrices ligula eget volutpat aliquet nullam",
-    Link: "#",
-  },
-  {
-    icon: <FaNetworkWired />,
-    name: "Database Security",
-    description: "Mauris ultrices ligula eget volutpat aliquet nullam",
-    Link: "#",
-  },
-  {
-    icon: <FaNetworkWired />,
-    name: "Database Security",
-    description: "Mauris ultrices ligula eget volutpat aliquet nullam",
-    Link: "#",
-  },
-  {
-    icon: <FaNetworkWired />,
-    name: "Database Security",
-    description: "Mauris ultrices ligula eget volutpat aliquet nullam",
-    Link: "#",
-  },
-  {
-    icon: <FaNetworkWired />,
-    name: "Database Security",
-    description: "Mauris ultrices ligula eget volutpat aliquet nullam",
-    Link: "#",
-  },
-];
-
 const SocialTestimonials = ({ reviews }) => {
   const locale = useLocale();
   const t = useTranslations("HomePage");

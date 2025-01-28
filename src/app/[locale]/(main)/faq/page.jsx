@@ -32,7 +32,7 @@ const page = async () => {
         <div className="FAQ-Container px-4 py-14 md:px-8 md:py-20">
           <div className="FAQ-Wrapper mx-auto max-w-screen-lg">
             <div className="FaqQuestions z-20 flex flex-col items-center">
-              <div className="FaqTitle relative z-20 mb-6 flex sm:w-3/4 flex-col items-center gap-4 text-center">
+              <div className="FaqTitle relative z-20 mb-6 flex flex-col items-center gap-4 text-center sm:w-3/4">
                 <h3 className="w-fit rounded-[36px] bg-[#219BE4]/10 px-3 py-1 text-[#219BE4]">
                   {faq("faq.small_title")}
                 </h3>
@@ -41,7 +41,7 @@ const page = async () => {
                 </h2>
                 <p className="text-gray-500">{faq("faq.description")}</p>
               </div>
-              <div className="FaqContent relative z-20 flex sm:w-5/6 overflow-hidden">
+              <div className="FaqContent relative z-20 flex overflow-hidden sm:w-5/6">
                 <FaqAccordion items={FaqQuestions} />
               </div>
             </div>

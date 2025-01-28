@@ -10,7 +10,10 @@
     "termsConditions": "Registration Policies",
     "faq": "Common Questions",
     "blogs": "News",
-    "contactUs": "Contact Us"
+    "contactUs": "Contact Us",
+    "mobilemenu":{
+      "rights":"© 2024 All Rights Reserved"
+    }
   },
   "Footer": {
     "newsletter": {
@@ -135,19 +138,23 @@
       "services-list": [
         {
           "title": "Elementary School",
-          "description": "The foundational stage of education, focusing on essential academic and social skills."
+          "description": "The foundational stage of education, focusing on essential academic and social skills.",
+          "href":"elementary-school"
         },
         {
           "title": "Middle School ",
-          "description": "Early steps in education, emphasizing general subjects and personal growth."
+          "description": "Early steps in education, emphasizing general subjects and personal growth.",
+          "href":"middle-school"
         },
         {
           "title": "High School",
-          "description": "Specialized education in fields like Math, Science, Humanities, and Computer Science, preparing students for university and careers."
+          "description": "Specialized education in fields like Math, Science, Humanities, and Computer Science, preparing students for university and careers.",
+          "href":"high-school"
         },
         {
-          "title": "Ehsaas",
-          "description": "A supportive space for students with special needs, providing a suitable environment and specialized facilities for empowerment."
+          "title": "Ehsan",
+          "description": "A supportive space for students with special needs, providing a suitable environment and specialized facilities for empowerment.",
+          "href":"ehsan"
         }
       ]
     },
@@ -300,7 +307,8 @@
         "expert_title": "Expert Teachers",
         "expert_description": "A team of specialists providing high-quality education and rehabilitation.",
         "comprehensive_title": "Comprehensive Support",
-        "comprehensive_description": "Ensuring equal opportunities for every student to succeed."
+        "comprehensive_description": "Ensuring equal opportunities for every student to succeed.",
+        "ehsan_link":"read more"
       },
       "guidance": {
         "heading": "Elementary School",

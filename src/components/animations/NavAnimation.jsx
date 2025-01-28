@@ -15,7 +15,22 @@ import {
   HiX,
 } from "react-icons/hi";
 import { MdContactEmergency } from "react-icons/md";
-// Animation Link
+import {
+  Menu,
+  X,
+  Plus,
+  Phone,
+  Mail,
+  Home,
+  School,
+  UserSquare2,
+  BookOpen,
+  Building2,
+  Shield,
+  HelpCircle,
+  Newspaper,
+  ContactRound,
+} from "lucide-react";
 import {
   FaWhatsapp,
   FaInstagram,
@@ -23,6 +38,7 @@ import {
   FaYoutube,
   FaQuestion,
 } from "react-icons/fa";
+
 // import toggles
 import Language from "@/components/buttons/Language";
 import Logo from "../../../public/logo/logo-header.png";
@@ -407,9 +423,10 @@ const pricingContent = ({ drop, pathName, isHomePage, hasScrolled }) => {
 
 const MobileMenu = ({ isHomePage, hasScrolled }) => {
   const t = useTranslations("Header");
-  const iconSize = 18; // Define a consistent icon size
+  const iconSize = 20;
+
   const navLinks = [
-    { title: t("home"), href: "/", icon: <HiHome size={iconSize} /> },
+    { title: t("home"), href: "/", icon: <Home size={iconSize} /> },
     {
       dropTitle: t("about"),
       href: "#",
@@ -417,22 +434,22 @@ const MobileMenu = ({ isHomePage, hasScrolled }) => {
         {
           label: t("about_us"),
           href: "/about-us",
-          icon: <FaSchool size={iconSize} />,
+          icon: <School size={iconSize} />,
         },
         {
           label: t("schoolStaff"),
           href: "/about-us/school-staff",
-          icon: <FaUserTie size={iconSize} />,
+          icon: <UserSquare2 size={iconSize} />,
         },
         {
           label: t("curriculum"),
           href: "/about-us/curriculum",
-          icon: <GiBookshelf size={iconSize} />,
+          icon: <BookOpen size={iconSize} />,
         },
         {
           label: t("facilities"),
           href: "/about-us/facilities",
-          icon: <GiBookshelf size={iconSize} />,
+          icon: <Building2 size={iconSize} />,
         },
       ],
     },
@@ -443,231 +460,227 @@ const MobileMenu = ({ isHomePage, hasScrolled }) => {
         {
           label: t("termsConditions"),
           href: "/terms-and-conditions",
-          icon: <BsShieldShaded size={iconSize} />,
+          icon: <Shield size={iconSize} />,
         },
-        {
-          label: t("faq"),
-          href: "/faq",
-          icon: <FaQuestion size={iconSize} />,
-        },
+        { label: t("faq"), href: "/faq", icon: <HelpCircle size={iconSize} /> },
       ],
     },
     {
       title: t("blogs"),
       href: "/school-news",
-      icon: <GiNewspaper size={iconSize} />,
+      icon: <Newspaper size={iconSize} />,
     },
     {
       title: t("contactUs"),
       href: "/contact-us",
-      icon: <MdContactEmergency size={iconSize} />,
+      icon: <ContactRound size={iconSize} />,
     },
   ];
+
   const [openMenu, setOpenMenu] = useState(false);
   const [linkItems, setLinkItems] = useState(false);
 
   useEffect(() => {
-    if (openMenu) {
-      document.body.style.overflow = "hidden"; // Disable scroll
-    } else {
-      document.body.style.overflow = "auto"; // Enable scroll
-    }
+    document.body.style.overflow = openMenu ? "hidden" : "auto";
     return () => {
-      document.body.style.overflow = "auto"; // Cleanup when menu closes
+      document.body.style.overflow = "auto";
     };
   }, [openMenu]);
 
-  const toggleMenu = () => {
-    setOpenMenu(!openMenu);
-  };
-  const handleDropdownToggle = (index) => {
+  const toggleMenu = () => setOpenMenu(!openMenu);
+  const handleDropdownToggle = (index) =>
     setLinkItems(linkItems === index ? null : index);
-  };
 
   return (
-    <div>
+    <div className="relative z-50">
       <button
-        onClick={() => toggleMenu()}
-        className={`relative flex h-10 w-10 items-center justify-center rounded-full ${!isHomePage && !hasScrolled ? "bg-[var(--secondary-color)] hover:bg-white hover:text-[var(--primary-color)]" : "bg-[var(--primary-color)] hover:bg-[var(--secondary-color)]"} text-white transition-colors`}
+        onClick={toggleMenu}
+        className={`group relative flex h-12 w-12 items-center justify-center rounded-full ${
+          !isHomePage && !hasScrolled
+            ? "bg-[var(--secondary-color)] hover:bg-white hover:text-[var(--primary-color)]"
+            : "bg-[var(--primary-color)] hover:bg-[var(--secondary-color)]"
+        } text-white transition-all duration-300 hover:scale-105`}
       >
-        <HiMenuAlt3 size={27} className="absolute" />
+        <Menu
+          size={28}
+          className="transition-transform group-hover:rotate-180"
+        />
       </button>
-      {
-        <AnimatePresence>
-          {openMenu && (
-            <>
-              <motion.div
-                initial={{ x: -300, opacity: 0 }} // Start from outside the viewport (off-screen right)
-                animate={{ x: 0, opacity: 1 }} // Slide into view
-                exit={{ x: -300, opacity: 0 }} // Slide out to the right
-                transition={{
-                  duration: 0.3,
-                  ease: "easeInOut",
-                }}
-                className="mobile-menu-container fixed left-0 top-0 z-50 flex h-screen w-full max-w-[300px] flex-col justify-between gap-16 overflow-y-auto bg-[var(--primary-color)]"
-              >
-                <div className="Menu-Container">
-                  <div className="top flex items-center justify-between gap-4 p-4">
-                    <div className="mobile-logo">
-                      <div className="logo relative max-xxs:hidden">
-                        <Image
-                          src={NoBgLogo}
-                          alt="Logo"
-                          width={240}
-                          quality={100}
-                          priority
-                        />
-                      </div>
-                    </div>
-                    <div className="close">
-                      <button className="relative flex h-11 w-11 items-center justify-center rounded-full bg-white text-[var(--primary-color)] transition-colors hover:bg-[var(--secondary-color)] hover:text-white">
-                        <HiX
-                          size={27}
-                          onClick={() => {
-                            toggleMenu();
-                            setLinkItems(false);
-                          }}
-                        />
-                      </button>
-                    </div>
+
+      <AnimatePresence>
+        {openMenu && (
+          <>
+            <motion.div
+              initial={{ x: -300, opacity: 0 }} // Start from outside the viewport (off-screen right)
+              animate={{ x: 0, opacity: 1 }} // Slide into view
+              exit={{ x: -300, opacity: 0 }} // Slide out to the right
+              transition={{
+                duration: 0.3,
+                ease: "easeInOut",
+              }}
+              className="fixed left-0 top-0 z-50 flex h-screen w-full max-w-[320px] flex-col justify-between overflow-y-auto bg-gradient-to-b from-[var(--primary-color)] to-[color-mix(in_srgb,var(--primary-color),#000_20%)] shadow-2xl"
+            >
+              <div className="flex flex-col">
+                <div className="flex items-center justify-between gap-4 p-5">
+                  <div className="logo relative max-xxs:hidden">
+                    <Image
+                      src={NoBgLogo}
+                      alt="Logo"
+                      width={240}
+                      quality={100}
+                      priority
+                    />
                   </div>
-                  <div className="mobile-menu-links flex flex-col py-4 capitalize text-white">
-                    {navLinks.map((link, index) => {
-                      if (link.dropTitle) {
-                        return (
-                          <div
-                            className="w-full border-b border-white/50"
-                            key={index}
-                          >
-                            <button
-                              onClick={() => handleDropdownToggle(index)}
-                              className="flex w-full items-center gap-2 p-3 text-left capitalize"
-                            >
-                              <motion.div
-                                initial={{ rotate: 0 }}
-                                animate={{
-                                  rotate: linkItems === index ? 135 : 0,
-                                }}
-                                transition={{
-                                  duration: 0.3,
-                                  ease: "easeInOut",
-                                }}
-                              >
-                                <HiPlus size={20} />
-                              </motion.div>
-                              {link.dropTitle}
-                            </button>
-                            <motion.div
-                              initial={{ height: 0 }}
-                              animate={{
-                                height: linkItems === index ? "auto" : 0,
-                              }}
-                              transition={{ duration: 0.4, ease: "easeInOut" }}
-                              className="flex w-full flex-col overflow-hidden"
-                            >
-                              {link.drop.map((dropLink, dropIndex) => (
-                                <div
-                                  className="border-t border-white/50"
-                                  key={dropIndex}
-                                >
-                                  <Link
-                                    className="flex items-center gap-2 p-3 pl-8"
-                                    href={dropLink.href}
-                                  >
-                                    {dropLink.icon}
-                                    {dropLink.label}
-                                  </Link>
-                                </div>
-                              ))}
-                            </motion.div>
-                          </div>
-                        );
-                      }
+                  <button
+                    onClick={() => {
+                      toggleMenu();
+                      setLinkItems(false);
+                    }}
+                    className="group relative flex max-h-12 min-h-12 min-w-12 max-w-12 items-center justify-center rounded-full bg-white text-[var(--primary-color)] shadow-lg transition-all duration-300 hover:scale-105 hover:bg-[var(--secondary-color)] hover:text-white"
+                  >
+                    <X
+                      size={28}
+                      className="transition-transform group-hover:rotate-90"
+                    />
+                  </button>
+                </div>
+
+                <div className="mt-4 flex flex-col space-y-1 px-3 text-white">
+                  {navLinks.map((link, index) => {
+                    if (link.dropTitle) {
                       return (
-                        <Link
-                          key={index}
-                          className="flex items-center gap-2 border-b border-white/50 p-3"
-                          href={link.href}
-                        >
-                          {link.icon}
-                          {link.title}
-                        </Link>
+                        <div key={index} className="rounded-lg bg-black/10">
+                          <button
+                            onClick={() => handleDropdownToggle(index)}
+                            className="flex w-full items-center gap-3 rounded-lg p-4 transition-colors hover:bg-white/10"
+                          >
+                            <motion.div
+                              initial={{ rotate: 0 }}
+                              animate={{
+                                rotate: linkItems === index ? 135 : 0,
+                              }}
+                              transition={{ duration: 0.3 }}
+                              className="rounded-full bg-[var(--secondary-color)] p-2"
+                            >
+                              <Plus size={20} />
+                            </motion.div>
+                            <span className="text-lg font-medium">
+                              {link.dropTitle}
+                            </span>
+                          </button>
+                          <motion.div
+                            initial={{ height: 0 }}
+                            animate={{
+                              height: linkItems === index ? "auto" : 0,
+                            }}
+                            transition={{ duration: 0.3 }}
+                            className="overflow-hidden"
+                          >
+                            {link.drop.map((dropLink, dropIndex) => (
+                              <a
+                                key={dropIndex}
+                                href={dropLink.href}
+                                className="flex items-center gap-3 p-4 pl-14 transition-colors hover:bg-white/5"
+                              >
+                                <span className="bg-[var(--secondary-color)]/80 rounded-full p-2">
+                                  {dropLink.icon}
+                                </span>
+                                <span>{dropLink.label}</span>
+                              </a>
+                            ))}
+                          </motion.div>
+                        </div>
                       );
-                    })}
-                  </div>
-                  <div className="digit flex w-fit flex-col gap-2 px-3 text-white max-sm:justify-center">
-                    <a
-                      className="flex w-fit items-center gap-2 hover:underline"
-                      href="tel:+971 4 298 811 6"
-                    >
-                      <span className="rounded-full bg-[var(--secondary-color)] p-3 text-xl text-white">
-                        <HiOutlinePhoneIncoming size={20} />
-                      </span>
-                      +971 4 298 811 6
-                    </a>
-                    <a
-                      className="flex w-fit items-center gap-2 hover:underline"
-                      href="mailto:info@ir-salmanfarsi.com"
-                    >
-                      <span className="rounded-full bg-[var(--secondary-color)] p-3 text-white">
-                        <HiOutlineMail size={20} />
-                      </span>
-                      info@ir-salmanfarsi.com
-                    </a>
-                  </div>
+                    }
+                    return (
+                      <a
+                        key={index}
+                        href={link.href}
+                        className="flex items-center gap-3 rounded-lg bg-black/10 p-4 transition-all hover:bg-white/10"
+                      >
+                        <span className="rounded-full bg-[var(--secondary-color)] p-2">
+                          {link.icon}
+                        </span>
+                        <span className="text-lg font-medium">
+                          {link.title}
+                        </span>
+                      </a>
+                    );
+                  })}
                 </div>
-                <div className="CopyRight-bottom flex flex-col gap-2 p-2">
-                  <div className="social flex items-center gap-2 text-white">
-                    <a
-                      href="#"
-                      className="flex w-fit items-center gap-2 hover:underline"
-                    >
-                      <span className="rounded-full bg-[var(--secondary-color)] p-3 text-xl text-white">
-                        <FaWhatsapp size={20} />
-                      </span>
-                    </a>
-                    <a
-                      href="https://www.instagram.com/ir.salmanfarsi/profilecard/?igsh=MXZtd2FybXd1OTNobw=="
-                      target="_blank"
-                      className="flex w-fit items-center gap-2 hover:underline"
-                    >
-                      <span className="rounded-full bg-[var(--secondary-color)] p-3 text-xl text-white">
-                        <FaInstagram size={20} />
-                      </span>
-                    </a>
-                    <a
-                      href="https://www.youtube.com/@salmanfarsiiranianschool73"
-                      target="_blank"
-                      className="flex w-fit items-center gap-2 hover:underline"
-                    >
-                      <span className="rounded-full bg-[var(--secondary-color)] p-3 text-xl text-white">
-                        <FaYoutube size={20} />
-                      </span>
-                    </a>
-                  </div>
-                  <div className="CopyRight text-sm capitalize text-white">
-                    <p>all copyright (c) 2024 reserved</p>
-                  </div>
+
+                <div className="mt-8 space-y-4 px-4">
+                  <a
+                    href="tel:+971 4 298 811 6"
+                    className="group flex items-center gap-3 rounded-lg bg-white/5 p-4 transition-all hover:bg-white/10"
+                  >
+                    <span className="rounded-full bg-[var(--secondary-color)] p-3 transition-transform group-hover:scale-110">
+                      <Phone size={22} />
+                    </span>
+                    <span className="text-white">+971 4 298 811 6</span>
+                  </a>
+                  <a
+                    href="mailto:info@ir-salmanfarsi.com"
+                    className="group flex items-center gap-3 rounded-lg bg-white/5 p-4 transition-all hover:bg-white/10"
+                  >
+                    <span className="rounded-full bg-[var(--secondary-color)] p-3 transition-transform group-hover:scale-110">
+                      <Mail size={22} />
+                    </span>
+                    <span className="text-white">info@ir-salmanfarsi.com</span>
+                  </a>
                 </div>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{
-                  duration: 0.3,
-                  ease: "easeInOut",
-                }}
-                className="background-shadow fixed left-0 top-0 z-40 h-screen w-full bg-black/60 backdrop-blur-md"
-                onClick={() => {
-                  setOpenMenu(false);
-                  setLinkItems(false);
-                }}
-              ></motion.div>
-            </>
-          )}
-        </AnimatePresence>
-      }
+              </div>
+
+              <div className="mt-auto space-y-4 p-4">
+                <div className="flex justify-center gap-4">
+                  {[
+                    {
+                      icon: <FaWhatsapp size={22} />,
+                      href: "https://api.whatsapp.com/send?phone=97142988116",
+                    },
+                    {
+                      icon: <FaInstagram size={22} />,
+                      href: "https://www.instagram.com/ir.salmanfarsi/profilecard/?igsh=MXZtd2FybXd1OTNobw==",
+                    },
+                    {
+                      icon: <FaYoutube size={22} />,
+                      href: "https://www.youtube.com/@salmanfarsiiranianschool73",
+                    },
+                  ].map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group rounded-full bg-[var(--secondary-color)] p-3 text-white transition-all hover:scale-110"
+                    >
+                      {social.icon}
+                    </a>
+                  ))}
+                </div>
+                <p className="text-center text-sm text-white/80">
+                  {t("mobilemenu.rights")}
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                duration: 0.3,
+                ease: "easeInOut",
+              }}
+              className="background-shadow fixed left-0 top-0 z-40 h-screen w-full bg-black/60 backdrop-blur-md"
+              onClick={() => {
+                setOpenMenu(false);
+                setLinkItems(false);
+              }}
+            />
+          </>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

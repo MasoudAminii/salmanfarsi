@@ -72,12 +72,18 @@ const page = async () => {
                     </p>
                   </div>
                 </div>
+                <Link
+                  className="relative w-fit text-right text-xl font-semibold capitalize text-[var(--secondary-color)] hover:underline"
+                  href={"/contact-us"}
+                >
+                  {Curriculum("curriculum.ehsan.ehsan_link")}
+                </Link>
               </div>
             </div>
           </div>
         </div>
         <div
-          id="elementary school"
+          id="elementry-school"
           className="Principal-Welcome bg-[#F9F9F9] px-4 py-14 md:px-8 md:py-20 lg:px-20"
         >
           <div className="PrincipalContainer mx-auto max-w-screen-2xl">
@@ -126,7 +132,7 @@ const page = async () => {
           </div>
         </div>
         <div
-          id="middle school"
+          id="middle-school"
           className="OurView-Welcome bg-[#F9F9F9] px-4 py-14 md:px-8 md:py-20 lg:px-20"
         >
           <div className="OurView-Container mx-auto max-w-screen-2xl">
@@ -164,7 +170,7 @@ const page = async () => {
           </div>
         </div>
         <div
-          id="highschool"
+          id="high-school"
           className="Our-Curriculum px-4 py-14 md:px-8 md:py-20 lg:px-20"
         >
           <div className="Curriculum-Container mx-auto max-w-screen-2xl">

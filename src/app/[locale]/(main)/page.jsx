@@ -371,7 +371,7 @@ const HomeServices = async () => {
                   </div>
                   <div className="ContentLink rounded-fullshadow-2xl absolute -bottom-8 z-30 flex size-14">
                     <Link
-                      href={"/about-us/curriculum"}
+                      href={`/about-us/curriculum#${service.href}`}
                       className="flex h-full w-full items-center justify-center rounded-full bg-white text-[#219BE4] shadow-xl transition-all duration-300 hover:bg-[#219BE4] hover:text-white"
                     >
                       <GoArrowUpRight className="size-8" />
