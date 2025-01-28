@@ -193,54 +193,58 @@ const Footer = async () => {
 
 const Newsletter = ({ footer }) => {
   return (
-    <div className="mx-auto flex h-[142.52px] w-full max-w-screen-xl justify-between gap-2 rounded-b-[30px] bg-[var(--secondary-color)] px-6 py-2 max-sm:flex-col sm:items-center">
-      <div className="footer-logo flex-auto sm:w-1/4">
-        <h1 className="flex-auto text-3xl font-bold text-white">
-          {footer("newsletter.title")}
-        </h1>
-      </div>
-      <div className="search-newsletter flex flex-auto justify-center sm:w-2/4">
-        <div className="flex w-full justify-center">
-          <form className="focus-within:none flex max-h-[56.21px] w-full items-center rounded-full bg-white py-2 sm:max-w-[504px] ltr:pl-4 ltr:pr-2 rtl:pl-2 rtl:pr-4">
+    <>
+      <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between gap-6 rounded-b-[20px] bg-[var(--secondary-color)] px-4 py-6 sm:flex-row sm:px-8 sm:py-8">
+        <div className="footer-logo flex-auto sm:w-1/4">
+          <h1 className="flex-auto text-3xl font-bold text-white">
+            {footer("newsletter.title")}
+          </h1>
+        </div>
+        <div className="search-newsletter flex flex-auto justify-center sm:w-2/4 sm:max-w-[480px]">
+          <form className="relative flex w-full items-center">
             <input
               placeholder={footer("newsletter.placeholder")}
-              className="w-full appearance-none bg-white focus:outline-none"
+              className="focus:ring-[var(--primary-color)]/20 h-14 w-full rounded-full border-2 border-transparent bg-white text-base transition-all duration-300 focus:border-[var(--primary-color)] focus:outline-none focus:ring-2 ltr:pl-6 ltr:pr-14 rtl:pl-14 rtl:pr-6"
             />
             <button
-              className="flex size-[48px] shrink-0 items-center justify-center rounded-full bg-[var(--secondary-color)] px-3 py-1 ltr:ml-2 rtl:mr-2"
+              className="absolute flex size-10 items-center justify-center rounded-full bg-[var(--secondary-color)] transition-all duration-300 hover:bg-[var(--primary-color)] ltr:right-2 rtl:left-2"
               type="submit"
             >
-              <PiTelegramLogo size={30} className="text-white" />
+              <PiTelegramLogo size={24} className="text-white" />
             </button>
           </form>
         </div>
-      </div>
-      <div className="footer-social w-1/4 flex-auto max-md:hidden">
-        <div className="social flex items-center justify-end gap-4 p-2 text-2xl text-white">
+        <div className="flex flex-auto items-center justify-center gap-4 sm:w-1/4 sm:justify-end">
           <a
             href="https://api.whatsapp.com/send?phone=97142988116"
-            className="rounded-full border border-white/50 bg-transparent p-2 transition-all duration-300 hover:border-[var(--primary-color)] hover:text-[var(--primary-color)]"
+            className="flex size-12 items-center justify-center rounded-full bg-white/10 text-xl text-white transition-all duration-300 hover:bg-white/20 hover:text-[var(--primary-color)]"
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
           >
             <FaWhatsapp />
           </a>
           <a
-            className="rounded-full border border-white bg-transparent p-2 transition-all duration-300 hover:border-[var(--primary-color)] hover:text-[var(--primary-color)]"
-            target="_blank"
             href="https://www.instagram.com/ir.salmanfarsi/profilecard/?igsh=MXZtd2FybXd1OTNobw=="
+            className="flex size-12 items-center justify-center rounded-full bg-white/10 text-xl text-white transition-all duration-300 hover:bg-white/20 hover:text-[var(--primary-color)]"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
           >
             <FaInstagram />
           </a>
           <a
-            className="rounded-full border border-white/50 bg-transparent p-2 transition-all duration-300 hover:border-[var(--primary-color)] hover:text-[var(--primary-color)]"
-            target="_blank"
             href="https://www.youtube.com/@salmanfarsiiranianschool73"
+            className="flex size-12 items-center justify-center rounded-full bg-white/10 text-xl text-white transition-all duration-300 hover:bg-white/20 hover:text-[var(--primary-color)]"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
           >
             <FaYoutube />
           </a>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

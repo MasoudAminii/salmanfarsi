@@ -19,8 +19,6 @@ model contact_us {
   id          String   @id @default(cuid())
   name        String
   email       String
-  phone       String?
-  subject     String?
   message     String
   submit_date DateTime @default(now())
 }

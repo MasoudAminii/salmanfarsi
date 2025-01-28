@@ -10,8 +10,8 @@ const BlogContent = ({ blogs }) => {
       {blogs.map((blog, index) => {
         const formattedDate = new Date(blog.publish_date).toLocaleDateString();
         return (
-          <div
-            key={index}
+          <article
+            key={blog.id}
             className={`item group relative overflow-hidden rounded-xl ${
               index === 0
                 ? "sm:col-span-2 md:row-span-2"
@@ -20,34 +20,44 @@ const BlogContent = ({ blogs }) => {
                   : ""
             } min-h-[250px]`}
           >
-            <Link href={`/school-news/${blog.id}`}>
-              <div className="image relative h-full w-full transition-all duration-400 group-hover:scale-105">
+            <Link
+              href={`/school-news/${blog.id}`}
+              aria-label={`Read more about ${blog.title}`}
+            >
+              <div className="image-container relative h-full w-full transform-gpu overflow-hidden transition-transform duration-300 ease-in-out group-hover:scale-105">
                 <Image
                   src={`/photo_main_post/${blog.main_image}`}
-                  alt="eid"
+                  alt={blog.title || "Blog post image"}
                   fill
-                  quality={100}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="h-full w-full object-cover"
+                  quality={80}
+                  priority={index === 0}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
                 />
               </div>
+
+              <div className="content-overlay absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/50 to-transparent p-6">
+                <div className="space-y-3 text-white">
+                  <span className="inline-block rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium backdrop-blur-sm transition-colors duration-300 group-hover:bg-white/20">
+                    {locale === "en"
+                      ? blog?.categories?.category_name_en
+                      : blog?.categories?.category_name}
+                  </span>
+
+                  <h3 className="line-clamp-2 text-xl font-bold leading-tight tracking-tight md:text-2xl">
+                    {locale === "en" ? blog?.title_en : blog?.title}
+                  </h3>
+
+                  <time
+                    className="block text-sm font-medium text-white/80"
+                    dateTime={blog.publish_date}
+                  >
+                    {formattedDate}
+                  </time>
+                </div>
+              </div>
             </Link>
-            <div className="text absolute bottom-0 left-0 right-0 flex flex-col gap-3 bg-gradient-to-t from-black to-transparent p-4 px-6">
-              <p className="w-fit rounded-full border border-gray-300 px-4 py-1 text-sm text-[var(--secondary-color)] text-white backdrop-blur-md">
-                {locale == "en"
-                  ? blog?.categories?.category_name_en
-                  : blog?.categories?.category_name}
-              </p>
-              <Link href={`/school-news/${blog.id}`}>
-                <h3 className="title line-clamp-2 text-base font-semibold text-white md:text-lg">
-                  {locale == "en" ? blog?.title_en : blog?.title}
-                </h3>
-              </Link>
-              <p className="date text-sm uppercase text-gray-300">
-                {formattedDate}
-              </p>
-            </div>
-          </div>
+          </article>
         );
       })}
     </div>

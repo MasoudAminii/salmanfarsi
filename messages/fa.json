@@ -307,7 +307,8 @@
         "expert_title": "معلمان متخصص",
         "expert_description": "تیمی از متخصصان که آموزش و توانبخشی با کیفیت بالا ارائه می‌دهند.",
         "comprehensive_title": "حمایت جامع",
-        "comprehensive_description": "تضمین فرصت‌های برابر برای موفقیت هر دانش‌آموز."
+        "comprehensive_description": "تضمین فرصت‌های برابر برای موفقیت هر دانش‌آموز.",
+        "ehsan_link": "بیشتر بخوانید"
       },
       "guidance": {
         "heading": "مدرسه ابتدایی",
@@ -688,7 +689,8 @@
           "label": "پیام",
           "placeholder": "پیام خود را وارد کنید"
         },
-        "submit": "ارسال"
+        "submit": "ارسال",
+        "submitting": "در حال ارسال"
       }
     }
   }

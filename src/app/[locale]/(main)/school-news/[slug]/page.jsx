@@ -1,4 +1,4 @@
-// import ViewCounter from "@/components/actions/ViewCounter";
+import ViewCounter from "@/components/actions/ViewCounter";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -69,7 +69,7 @@ const page = async ({ params }) => {
   const formatedDate = new Date(blog.publish_date).toLocaleDateString();
   return (
     <div className="NewsPage">
-      {/* <ViewCounter slug={params.slug} /> */}
+      <ViewCounter slug={params.slug} />
       <div className="Blogs mt-24 px-4 py-14 md:px-8 md:py-20">
         <div className="Main-Wrapper mx-auto max-w-screen-2xl">
           <div className="breadcrumb pb-6">
@@ -132,19 +132,21 @@ const page = async ({ params }) => {
                 </p>
               </div>
               <div className="page-text mb-8">
-                <h2 className="heading-2 mb-4 capitalize text-[#072F60] rtl:leading-snug">
+                <h2 className="heading-1 text-gray-900">
                   {locale == "en" ? blog?.title_en : blog?.title}
                 </h2>
-                {blog.content1 && (
-                  <p className="paraghraph-2 mb-4 text-justify leading-relaxed text-[#504E4E]">
-                    {locale == "en" ? blog?.content1_en : blog?.content1}
-                  </p>
-                )}
-                {blog.content2 && (
-                  <p className="paraghraph-2 text-justify leading-relaxed text-[#504E4E]">
-                    {locale == "en" ? blog?.content2_en : blog?.content2}
-                  </p>
-                )}
+                <div className="mt-6 space-y-6 text-gray-700">
+                  {blog.content1 && (
+                    <p className="leading-relaxed">
+                      {locale == "en" ? blog?.content1_en : blog?.content1}
+                    </p>
+                  )}
+                  {blog.content2 && (
+                    <p className="leading-relaxed">
+                      {locale == "en" ? blog?.content2_en : blog?.content2}
+                    </p>
+                  )}
+                </div>
               </div>
               {(blog.image1 || blog.image2) && (
                 <div className="second-image flex gap-4 max-sm:flex-col">

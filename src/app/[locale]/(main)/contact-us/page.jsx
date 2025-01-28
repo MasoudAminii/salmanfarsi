@@ -1,14 +1,14 @@
 import TextParallax from "@/components/animations/TextParallax";
+import ContactVideo from "@/components/buttons/ContactVideo";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import { Input, Textarea } from "@nextui-org/react";
-import ImageContact from "../../../../../public/skeleton/Contact.png";
 import {
+  HiLocationMarker,
   HiOutlineMail,
   HiOutlinePhoneIncoming,
-  HiLocationMarker,
 } from "react-icons/hi";
-import { getTranslations } from "next-intl/server";
-import ContactVideo from "@/components/buttons/ContactVideo";
+import ImageContact from "../../../../../public/skeleton/Contact.png";
+import { ContactForm } from "./ContactForm";
 
 export const metadata = {
   title: "Conatct Us",
@@ -48,39 +48,7 @@ const page = async () => {
                 </h4>
                 <p className="text-[#504E4E]">{t("contact.description")}</p>
               </div>
-              <form action="">
-                <div className="Form-Container md mt-6 flex flex-col gap-4 rounded-2xl p-6 py-8 shadow-lg shadow-gray-400">
-                  <p className="text-xl font-bold capitalize text-[var(--secondary-color)]">
-                    {t("contact.form.getintouch")}
-                  </p>
-                  <div className="Inputs flex flex-wrap gap-4 md:flex-nowrap">
-                    <Input
-                      variant="faded"
-                      type="Name"
-                      label={t("contact.form.name")}
-                    />
-                    <Input
-                      variant="faded"
-                      type="Email"
-                      label={t("contact.form.email")}
-                    />
-                  </div>
-                  <div className="Textarea">
-                    <Textarea
-                      variant="faded"
-                      label={t("contact.form.message.label")}
-                      placeholder={t("contact.form.message.placeholder")}
-                      minRows={7}
-                      className="w-full"
-                    />
-                  </div>
-                  <div className="Submit">
-                    <button className="w-fit rounded-[100px] bg-[#EAF3F8] px-6 py-4 text-sm font-bold uppercase text-[var(--secondary-color)] transition-all duration-300 hover:bg-[#635ad9] hover:text-white">
-                      {t("contact.form.submit")}
-                    </button>
-                  </div>
-                </div>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>

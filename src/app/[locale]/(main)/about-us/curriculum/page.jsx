@@ -74,7 +74,7 @@ const page = async () => {
                 </div>
                 <Link
                   className="relative w-fit text-right text-xl font-semibold capitalize text-[var(--secondary-color)] hover:underline"
-                  href={"/contact-us"}
+                  href={"about-us/curriculum/ehsan"}
                 >
                   {Curriculum("curriculum.ehsan.ehsan_link")}
                 </Link>
