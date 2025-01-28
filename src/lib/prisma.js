@@ -68,33 +68,40 @@ export async function getTopPosts() {
 
 export async function getQuery(query) {
   try {
-    if (!query || query.trim() === "") {
-      return [];
-    }
+    if (!query || query.trim() === "") return [];
     return prisma.post.findMany({
       where: {
         OR: [
           {
             title_en: {
               contains: query,
+              mode: "insensitive",
             },
           },
           {
             title: {
               contains: query,
+              mode: "insensitive",
             },
           },
+          // Corrected category query syntax
           {
             categories: {
-              category_name_en: {
-                contains: query,
+              is: {
+                category_name_en: {
+                  contains: query,
+                  mode: "insensitive",
+                },
               },
             },
           },
           {
             categories: {
-              category_name: {
-                contains: query,
+              is: {
+                category_name: {
+                  contains: query,
+                  mode: "insensitive",
+                },
               },
             },
           },
@@ -107,9 +114,7 @@ export async function getQuery(query) {
         title: true,
         main_image: true,
       },
-      orderBy: {
-        publish_date: "desc", // Sort by publish_date in descending order
-      },
+      orderBy: { publish_date: "desc" },
       take: 10,
     });
   } catch (err) {
@@ -120,14 +125,22 @@ export async function getQuery(query) {
 
 export async function getQueryStaff(query) {
   try {
-    if (!query || query.trim() === "") {
-      return [];
-    }
+    if (!query || query.trim() === "") return [];
     return prisma.staff.findMany({
       where: {
         OR: [
-          { name_en: { contains: query } },
-          { name_fa: { contains: query } },
+          {
+            name_en: {
+              contains: query,
+              mode: "insensitive", // Add case-insensitive search
+            },
+          },
+          {
+            name_fa: {
+              contains: query,
+              mode: "insensitive",
+            },
+          },
         ],
       },
       take: 10,

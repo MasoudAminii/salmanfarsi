@@ -12,7 +12,6 @@ const SearchInput = () => {
   const router = useRouter();
   // Filter
   const [filterShow, setFilterShow] = useState(false);
-  console.log(filterShow);
 
   // State to manage the search input
   const [inputValue, setInputValue] = useState(searchParams.get("query") || "");
