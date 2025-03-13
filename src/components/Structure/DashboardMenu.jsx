@@ -18,14 +18,14 @@ const menuLinks = [
   {
     icon: <GrUserWorker size={20} />, // Example icon
     label: "school staff",
-    link: "/schoolstaff",
+    link: "/dashboard/schoolstaff",
   },
 ];
 const DashboardMenu = () => {
   return (
     <div className="sidebar h-screen w-64 bg-white p-6 text-black">
       <div className="title mb-6 flex items-center gap-4">
-        <div className="icon rounded-lg bg-[var(--secondary-color)] p-2 text-white">
+        <div className="icon rounded-lg bg-[#5D5FEF] p-2 text-white">
           <MdOutlineAdminPanelSettings size={30} />
         </div>
         <h2 className="text-3xl font-bold capitalize">admin</h2>
@@ -35,7 +35,7 @@ const DashboardMenu = () => {
           <li key={index}>
             <Link
               href={item.link}
-              className="flex items-center rounded-2xl px-4 py-3 hover:bg-[var(--secondary-color)] hover:text-white"
+              className="flex items-center rounded-2xl px-4 py-3 hover:bg-[#5D5FEF] hover:text-white"
             >
               <span className="icon">{item.icon}</span>
               <span className="label ml-4 text-lg">{item.label}</span>

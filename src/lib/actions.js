@@ -24,24 +24,33 @@ export async function getBlog(page, query) {
           {
             title_en: {
               contains: query,
+              mode: "insensitive",
             },
           },
           {
             title: {
               contains: query,
+              mode: "insensitive",
             },
           },
+          // Corrected category query syntax
           {
             categories: {
-              category_name_en: {
-                contains: query,
+              is: {
+                category_name_en: {
+                  contains: query,
+                  mode: "insensitive",
+                },
               },
             },
           },
           {
             categories: {
-              category_name: {
-                contains: query,
+              is: {
+                category_name: {
+                  contains: query,
+                  mode: "insensitive",
+                },
               },
             },
           },
@@ -68,8 +77,18 @@ export async function getStaff(page, query) {
     if (query && query.trim() !== "") {
       whereCondition = {
         OR: [
-          { name_en: { contains: query } },
-          { name_fa: { contains: query } },
+          {
+            name_en: {
+              contains: query,
+              mode: "insensitive", // Add case-insensitive search
+            },
+          },
+          {
+            name_fa: {
+              contains: query,
+              mode: "insensitive",
+            },
+          },
         ],
       };
     }

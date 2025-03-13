@@ -164,50 +164,89 @@ const NavAnimation = () => {
             hasScrolled ? "bg-[#EDF6FF]" : ""
           } transition-colors duration-300 ${bgColor ? "bg-[#EDF6FF]" : ""}`}
         >
-          <div className="top-nav min-h-[50px] rounded-b-[30px] bg-[#17012C] px-4 py-2 sm:px-6">
-            <div className="contact-container flex min-h-[53px] flex-wrap items-center justify-center sm:justify-between">
-              <div className="digit flex w-fit flex-wrap items-center gap-4 text-white max-sm:justify-center">
-                <a
-                  className="flex w-fit items-center gap-1 text-sm hover:underline xs:text-base"
-                  href="tel:+971 4 298 811 6"
-                >
-                  <span className="text-xl text-[#635AD9]">
-                    <HiOutlinePhoneIncoming />
-                  </span>
-                  +971 4 298 811 6
-                </a>
-                <a
-                  className="flex w-fit items-center gap-1 text-sm hover:underline xs:text-base"
-                  href="mailto:info@ir-salmanfarsi.com"
-                >
-                  <span className="text-xl text-[#635AD9]">
-                    <HiOutlineMail />
-                  </span>
-                  info@ir-salmanfarsi.com
-                </a>
-              </div>
-              <div className="social mr-4 flex items-center gap-4 text-xl text-[#635AD9] max-sm:hidden">
-                <a
-                  href="https://api.whatsapp.com/send?phone=97142988116"
-                  className="transition-all duration-300 hover:text-white"
-                  target="_blank"
-                >
-                  <FaWhatsapp />
-                </a>
-                <a
-                  className="transition-all duration-300 hover:text-white"
-                  href="https://www.instagram.com/ir.salmanfarsi/profilecard/?igsh=MXZtd2FybXd1OTNobw=="
-                  target="_blank"
-                >
-                  <FaInstagram />
-                </a>
-                <a
-                  className="transition-all duration-300 hover:text-white"
-                  href="https://www.youtube.com/@salmanfarsiiranianschool73"
-                  target="_blank"
-                >
-                  <FaYoutube />
-                </a>
+          <div className="top-nav rounded-b-2xl bg-[#17012C] py-4 md:rounded-b-3xl">
+            <div className="mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex flex-col items-center justify-between sm:flex-row">
+                {/* Contact Info */}
+                <div className="flex flex-col items-center gap-4 max-xs:hidden xs:flex-row xs:gap-6">
+                  <a
+                    href="tel:+971 4 298 811 6"
+                    className="group flex items-center gap-2 text-white transition-colors duration-300 hover:text-[#9881FF]"
+                    aria-label="Call us"
+                  >
+                    <HiOutlinePhoneIncoming className="text-2xl text-[#635AD9] group-hover:animate-pulse" />
+                    <span className="text-sm font-medium sm:text-base">
+                      +971 4 298 811 6
+                    </span>
+                  </a>
+
+                  <div
+                    className="hidden h-6 w-px bg-[#635AD9]/50 xs:block"
+                    aria-hidden="true"
+                  ></div>
+
+                  <a
+                    href="mailto:info@ir-salmanfarsi.com"
+                    className="group flex items-center gap-2 text-white transition-colors duration-300 hover:text-[#9881FF]"
+                    aria-label="Email us"
+                  >
+                    <HiOutlineMail className="text-2xl text-[#635AD9] group-hover:animate-pulse" />
+                    <span className="text-sm font-medium sm:text-base">
+                      info@ir-salmanfarsi.com
+                    </span>
+                  </a>
+                </div>
+                <div className="digit flex w-fit flex-wrap items-center gap-4 text-white max-sm:justify-center xs:hidden">
+                  <a
+                    className="flex w-fit items-center gap-1 text-sm hover:underline xs:text-base"
+                    href="tel:+971 4 298 811 6"
+                  >
+                    <span className="text-xl text-[#635AD9]">
+                      <HiOutlinePhoneIncoming />
+                    </span>
+                    +971 4 298 811 6
+                  </a>
+                  <a
+                    className="flex w-fit items-center gap-1 text-sm hover:underline xs:text-base"
+                    href="mailto:info@ir-salmanfarsi.com"
+                  >
+                    <span className="text-xl text-[#635AD9]">
+                      <HiOutlineMail />
+                    </span>
+                    info@ir-salmanfarsi.com
+                  </a>
+                </div>
+
+                {/* Social Links */}
+                <div className="flex items-center space-x-5 max-sm:hidden sm:space-x-6">
+                  <a
+                    href="https://api.whatsapp.com/send?phone=97142988116"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-2xl text-[#635AD9] transition-colors duration-300 hover:scale-110 hover:text-white"
+                    aria-label="WhatsApp"
+                  >
+                    <FaWhatsapp />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/ir.salmanfarsi/profilecard/?igsh=MXZtd2FybXd1OTNobw=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-2xl text-[#635AD9] transition-colors duration-300 hover:scale-110 hover:text-white"
+                    aria-label="Instagram"
+                  >
+                    <FaInstagram />
+                  </a>
+                  <a
+                    href="https://www.youtube.com/@salmanfarsiiranianschool73"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-2xl text-[#635AD9] transition-colors duration-300 hover:scale-110 hover:text-white"
+                    aria-label="YouTube"
+                  >
+                    <FaYoutube />
+                  </a>
+                </div>
               </div>
             </div>
           </div>

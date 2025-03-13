@@ -7,7 +7,7 @@ const DashboardLayout = ({ children }) => {
         <DashboardMenu />
       </div>
       <div className="w-full">
-        <div className="dashboard-top p-4">
+        <div className="dashboard-top p-6">
           <h1 className="text-4xl font-bold capitalize">Dashboard</h1>
         </div>
         <div className="dashboard-bottom h-full w-full bg-[#FAFBFC] p-4">
